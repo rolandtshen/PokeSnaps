@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A163EF51D402F6F00FC8FE1 /* TopTrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A163EF41D402F6F00FC8FE1 /* TopTrendingViewController.swift */; };
+		2A163EF71D402F7E00FC8FE1 /* TopTrending.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A163EF61D402F7E00FC8FE1 /* TopTrending.storyboard */; };
 		2AD3F3BF1D4008BB000626E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD3F3BE1D4008BB000626E5 /* AppDelegate.swift */; };
 		2AD3F3C41D4008BB000626E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD3F3C21D4008BB000626E5 /* Main.storyboard */; };
 		2AD3F3C61D4008BB000626E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD3F3C51D4008BB000626E5 /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 
 /* Begin PBXFileReference section */
 		0CC5464C957ABD16978127A4 /* Pods_PokeSnaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeSnaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A163EF41D402F6F00FC8FE1 /* TopTrendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopTrendingViewController.swift; sourceTree = "<group>"; };
+		2A163EF61D402F7E00FC8FE1 /* TopTrending.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TopTrending.storyboard; sourceTree = "<group>"; };
 		2AD3F3BB1D4008BB000626E5 /* PokeSnaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeSnaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AD3F3BE1D4008BB000626E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AD3F3C31D4008BB000626E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -38,9 +42,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A163EF31D402F4A00FC8FE1 /* TopTrending */ = {
+			isa = PBXGroup;
+			children = (
+				2A163EF41D402F6F00FC8FE1 /* TopTrendingViewController.swift */,
+				2A163EF61D402F7E00FC8FE1 /* TopTrending.storyboard */,
+			);
+			name = TopTrending;
+			sourceTree = "<group>";
+		};
 		2AD3F3B21D4008BB000626E5 = {
 			isa = PBXGroup;
 			children = (
+				2A163EF31D402F4A00FC8FE1 /* TopTrending */,
 				2AD3F3BD1D4008BB000626E5 /* PokeSnaps */,
 				2AD3F3BC1D4008BB000626E5 /* Products */,
 				F7D0A52B4DBDB882F7DDB3C9 /* Pods */,
@@ -150,6 +164,7 @@
 				2AD3F3C91D4008BB000626E5 /* LaunchScreen.storyboard in Resources */,
 				2AD3F3C61D4008BB000626E5 /* Assets.xcassets in Resources */,
 				2AD3F3C41D4008BB000626E5 /* Main.storyboard in Resources */,
+				2A163EF71D402F7E00FC8FE1 /* TopTrending.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AD3F3BF1D4008BB000626E5 /* AppDelegate.swift in Sources */,
+				2A163EF51D402F6F00FC8FE1 /* TopTrendingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
