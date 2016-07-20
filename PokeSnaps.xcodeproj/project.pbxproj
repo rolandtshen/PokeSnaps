@@ -12,9 +12,11 @@
 		2AD3F3C41D4008BB000626E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD3F3C21D4008BB000626E5 /* Main.storyboard */; };
 		2AD3F3C61D4008BB000626E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD3F3C51D4008BB000626E5 /* Assets.xcassets */; };
 		2AD3F3C91D4008BB000626E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD3F3C71D4008BB000626E5 /* LaunchScreen.storyboard */; };
+		3108559CE57098FFFC417D6F /* Pods_PokeSnaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC5464C957ABD16978127A4 /* Pods_PokeSnaps.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CC5464C957ABD16978127A4 /* Pods_PokeSnaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeSnaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AD3F3BB1D4008BB000626E5 /* PokeSnaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeSnaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AD3F3BE1D4008BB000626E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AD3F3C01D4008BB000626E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		2AD3F3C51D4008BB000626E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AD3F3C81D4008BB000626E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AD3F3CA1D4008BB000626E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		772A33EC81728D692630120D /* Pods-PokeSnaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeSnaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeSnaps/Pods-PokeSnaps.debug.xcconfig"; sourceTree = "<group>"; };
+		BFD1CC1A2B905199A93F3A8A /* Pods-PokeSnaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeSnaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeSnaps/Pods-PokeSnaps.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3108559CE57098FFFC417D6F /* Pods_PokeSnaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				2AD3F3BD1D4008BB000626E5 /* PokeSnaps */,
 				2AD3F3BC1D4008BB000626E5 /* Products */,
+				F7D0A52B4DBDB882F7DDB3C9 /* Pods */,
+				9B5111847A44DE03B9290A26 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = PokeSnaps;
 			sourceTree = "<group>";
 		};
+		9B5111847A44DE03B9290A26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0CC5464C957ABD16978127A4 /* Pods_PokeSnaps.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7D0A52B4DBDB882F7DDB3C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				772A33EC81728D692630120D /* Pods-PokeSnaps.debug.xcconfig */,
+				BFD1CC1A2B905199A93F3A8A /* Pods-PokeSnaps.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AD3F3CD1D4008BB000626E5 /* Build configuration list for PBXNativeTarget "PokeSnaps" */;
 			buildPhases = (
+				46D15D73801A736D958A70EF /* [CP] Check Pods Manifest.lock */,
 				2AD3F3B71D4008BB000626E5 /* Sources */,
 				2AD3F3B81D4008BB000626E5 /* Frameworks */,
 				2AD3F3B91D4008BB000626E5 /* Resources */,
+				4EF80D9BF62608BE544AFDE0 /* [CP] Embed Pods Frameworks */,
+				ADCC9E5DA44D7EACEA6E7EF3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		46D15D73801A736D958A70EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4EF80D9BF62608BE544AFDE0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PokeSnaps/Pods-PokeSnaps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADCC9E5DA44D7EACEA6E7EF3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PokeSnaps/Pods-PokeSnaps-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2AD3F3B71D4008BB000626E5 /* Sources */ = {
@@ -248,6 +323,7 @@
 		};
 		2AD3F3CE1D4008BB000626E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 772A33EC81728D692630120D /* Pods-PokeSnaps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PokeSnaps/Info.plist;
@@ -259,6 +335,7 @@
 		};
 		2AD3F3CF1D4008BB000626E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFD1CC1A2B905199A93F3A8A /* Pods-PokeSnaps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PokeSnaps/Info.plist;
@@ -287,6 +364,7 @@
 				2AD3F3CF1D4008BB000626E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
