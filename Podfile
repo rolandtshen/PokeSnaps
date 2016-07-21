@@ -8,7 +8,9 @@ target 'PokeSnaps' do
   pod 'Bond', '4.0.0'
   pod "ConvenienceKit"
   pod 'Parse'
-  pod 'ParseFacebookUtilsV4'
+  pod 'Koloda', '~> 3.1.1'
+
+
   pod 'ParseUI'
 
   # Pods for PokeSnaps

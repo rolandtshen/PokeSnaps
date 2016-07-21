@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        let configuration = ParseClientConfiguration {
+            $0.applicationId = "PokeSnap"
+            $0.server = "http://pokesnap.herokuapp.com/parse"
+            
+            print("initialized")
+            
+        }
+        Parse.initializeWithConfiguration(configuration)
+        
+        let acl = PFACL()
+        acl.publicReadAccess = true
+        PFACL.setDefaultACL(acl, withAccessForCurrentUser: true)
+
         return true
     }
 

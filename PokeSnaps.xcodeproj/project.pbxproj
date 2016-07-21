@@ -12,6 +12,10 @@
 		2AD3F3C61D4008BB000626E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD3F3C51D4008BB000626E5 /* Assets.xcassets */; };
 		2AD3F3C91D4008BB000626E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD3F3C71D4008BB000626E5 /* LaunchScreen.storyboard */; };
 		3108559CE57098FFFC417D6F /* Pods_PokeSnaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC5464C957ABD16978127A4 /* Pods_PokeSnaps.framework */; };
+		E569F1661D403025008D46B1 /* CameraFunc.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E569F1651D403025008D46B1 /* CameraFunc.storyboard */; };
+		E569F1681D40303A008D46B1 /* CameraFuncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E569F1671D40303A008D46B1 /* CameraFuncViewController.swift */; };
+		E569F16C1D403BC2008D46B1 /* PhotoTakingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E569F16B1D403BC2008D46B1 /* PhotoTakingHelper.swift */; };
+		E5AC220D1D4197F60046A9E7 /* rateStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5AC220C1D4197F60046A9E7 /* rateStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,9 +25,13 @@
 		2AD3F3C31D4008BB000626E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2AD3F3C51D4008BB000626E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AD3F3C81D4008BB000626E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2AD3F3CA1D4008BB000626E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AD3F3CA1D4008BB000626E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../PokeSnaps/Info.plist; sourceTree = "<group>"; };
 		772A33EC81728D692630120D /* Pods-PokeSnaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeSnaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeSnaps/Pods-PokeSnaps.debug.xcconfig"; sourceTree = "<group>"; };
 		BFD1CC1A2B905199A93F3A8A /* Pods-PokeSnaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeSnaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeSnaps/Pods-PokeSnaps.release.xcconfig"; sourceTree = "<group>"; };
+		E569F1651D403025008D46B1 /* CameraFunc.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CameraFunc.storyboard; sourceTree = "<group>"; };
+		E569F1671D40303A008D46B1 /* CameraFuncViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraFuncViewController.swift; sourceTree = "<group>"; };
+		E569F16B1D403BC2008D46B1 /* PhotoTakingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTakingHelper.swift; sourceTree = "<group>"; };
+		E5AC220C1D4197F60046A9E7 /* rateStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = rateStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +49,7 @@
 		2AD3F3B21D4008BB000626E5 = {
 			isa = PBXGroup;
 			children = (
+				E569F1621D402F9A008D46B1 /* cameraFunc */,
 				2AD3F3BD1D4008BB000626E5 /* PokeSnaps */,
 				2AD3F3BC1D4008BB000626E5 /* Products */,
 				F7D0A52B4DBDB882F7DDB3C9 /* Pods */,
@@ -63,7 +72,6 @@
 				2AD3F3C21D4008BB000626E5 /* Main.storyboard */,
 				2AD3F3C51D4008BB000626E5 /* Assets.xcassets */,
 				2AD3F3C71D4008BB000626E5 /* LaunchScreen.storyboard */,
-				2AD3F3CA1D4008BB000626E5 /* Info.plist */,
 			);
 			path = PokeSnaps;
 			sourceTree = "<group>";
@@ -74,6 +82,18 @@
 				0CC5464C957ABD16978127A4 /* Pods_PokeSnaps.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E569F1621D402F9A008D46B1 /* cameraFunc */ = {
+			isa = PBXGroup;
+			children = (
+				E569F1651D403025008D46B1 /* CameraFunc.storyboard */,
+				E5AC220C1D4197F60046A9E7 /* rateStoryboard.storyboard */,
+				E569F1671D40303A008D46B1 /* CameraFuncViewController.swift */,
+				E569F16B1D403BC2008D46B1 /* PhotoTakingHelper.swift */,
+				2AD3F3CA1D4008BB000626E5 /* Info.plist */,
+			);
+			path = cameraFunc;
 			sourceTree = "<group>";
 		};
 		F7D0A52B4DBDB882F7DDB3C9 /* Pods */ = {
@@ -120,7 +140,7 @@
 				TargetAttributes = {
 					2AD3F3BA1D4008BB000626E5 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 9J7BM537A2;
+						DevelopmentTeam = CM3UL49RH2;
 					};
 				};
 			};
@@ -148,6 +168,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AD3F3C91D4008BB000626E5 /* LaunchScreen.storyboard in Resources */,
+				E569F1661D403025008D46B1 /* CameraFunc.storyboard in Resources */,
+				E5AC220D1D4197F60046A9E7 /* rateStoryboard.storyboard in Resources */,
 				2AD3F3C61D4008BB000626E5 /* Assets.xcassets in Resources */,
 				2AD3F3C41D4008BB000626E5 /* Main.storyboard in Resources */,
 			);
@@ -208,7 +230,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E569F16C1D403BC2008D46B1 /* PhotoTakingHelper.swift in Sources */,
 				2AD3F3BF1D4008BB000626E5 /* AppDelegate.swift in Sources */,
+				E569F1681D40303A008D46B1 /* CameraFuncViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,10 +346,13 @@
 			baseConfigurationReference = 772A33EC81728D692630120D /* Pods-PokeSnaps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PokeSnaps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pokesnaps.PokeSnaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -334,10 +361,13 @@
 			baseConfigurationReference = BFD1CC1A2B905199A93F3A8A /* Pods-PokeSnaps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PokeSnaps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pokesnaps.PokeSnaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
