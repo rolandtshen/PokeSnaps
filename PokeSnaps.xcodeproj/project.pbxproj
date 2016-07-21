@@ -15,7 +15,6 @@
 		E569F1661D403025008D46B1 /* CameraFunc.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E569F1651D403025008D46B1 /* CameraFunc.storyboard */; };
 		E569F1681D40303A008D46B1 /* CameraFuncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E569F1671D40303A008D46B1 /* CameraFuncViewController.swift */; };
 		E569F16C1D403BC2008D46B1 /* PhotoTakingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E569F16B1D403BC2008D46B1 /* PhotoTakingHelper.swift */; };
-		E5AC220D1D4197F60046A9E7 /* rateStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5AC220C1D4197F60046A9E7 /* rateStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
 		E569F1651D403025008D46B1 /* CameraFunc.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CameraFunc.storyboard; sourceTree = "<group>"; };
 		E569F1671D40303A008D46B1 /* CameraFuncViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraFuncViewController.swift; sourceTree = "<group>"; };
 		E569F16B1D403BC2008D46B1 /* PhotoTakingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTakingHelper.swift; sourceTree = "<group>"; };
-		E5AC220C1D4197F60046A9E7 /* rateStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = rateStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				E569F1651D403025008D46B1 /* CameraFunc.storyboard */,
-				E5AC220C1D4197F60046A9E7 /* rateStoryboard.storyboard */,
 				E569F1671D40303A008D46B1 /* CameraFuncViewController.swift */,
 				E569F16B1D403BC2008D46B1 /* PhotoTakingHelper.swift */,
 				2AD3F3CA1D4008BB000626E5 /* Info.plist */,
@@ -169,7 +166,6 @@
 			files = (
 				2AD3F3C91D4008BB000626E5 /* LaunchScreen.storyboard in Resources */,
 				E569F1661D403025008D46B1 /* CameraFunc.storyboard in Resources */,
-				E5AC220D1D4197F60046A9E7 /* rateStoryboard.storyboard in Resources */,
 				2AD3F3C61D4008BB000626E5 /* Assets.xcassets in Resources */,
 				2AD3F3C41D4008BB000626E5 /* Main.storyboard in Resources */,
 			);
