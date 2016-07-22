@@ -16,6 +16,7 @@
 		2AD3F3C61D4008BB000626E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD3F3C51D4008BB000626E5 /* Assets.xcassets */; };
 		2AD3F3C91D4008BB000626E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD3F3C71D4008BB000626E5 /* LaunchScreen.storyboard */; };
 		3108559CE57098FFFC417D6F /* Pods_PokeSnaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC5464C957ABD16978127A4 /* Pods_PokeSnaps.framework */; };
+		E5E4B00F1D42B0C000AAE2D2 /* RateViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5E4B00E1D42B0C000AAE2D2 /* RateViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		2AD3F3CA1D4008BB000626E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		772A33EC81728D692630120D /* Pods-PokeSnaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeSnaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeSnaps/Pods-PokeSnaps.debug.xcconfig"; sourceTree = "<group>"; };
 		BFD1CC1A2B905199A93F3A8A /* Pods-PokeSnaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeSnaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeSnaps/Pods-PokeSnaps.release.xcconfig"; sourceTree = "<group>"; };
+		E5E4B00E1D42B0C000AAE2D2 /* RateViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RateViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		2AD3F3B21D4008BB000626E5 = {
 			isa = PBXGroup;
 			children = (
+				E5E4B00D1D42B09D00AAE2D2 /* rateViewController */,
 				2A163EF31D402F4A00FC8FE1 /* TopTrending */,
 				2AD3F3BD1D4008BB000626E5 /* PokeSnaps */,
 				2AD3F3BC1D4008BB000626E5 /* Products */,
@@ -94,6 +97,14 @@
 				0CC5464C957ABD16978127A4 /* Pods_PokeSnaps.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5E4B00D1D42B09D00AAE2D2 /* rateViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E5E4B00E1D42B0C000AAE2D2 /* RateViewController.storyboard */,
+			);
+			path = rateViewController;
 			sourceTree = "<group>";
 		};
 		F7D0A52B4DBDB882F7DDB3C9 /* Pods */ = {
@@ -167,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5E4B00F1D42B0C000AAE2D2 /* RateViewController.storyboard in Resources */,
 				2AD3F3C91D4008BB000626E5 /* LaunchScreen.storyboard in Resources */,
 				2AD3F3C61D4008BB000626E5 /* Assets.xcassets in Resources */,
 				2AD3F3C41D4008BB000626E5 /* Main.storyboard in Resources */,
