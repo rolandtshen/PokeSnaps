@@ -20,6 +20,8 @@
 		E5E4B0131D42B33900AAE2D2 /* BackgroundAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E4B0121D42B33900AAE2D2 /* BackgroundAnimationViewController.swift */; };
 		E5E4B0151D42BE4600AAE2D2 /* ExampleOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E4B0141D42BE4600AAE2D2 /* ExampleOverlayView.swift */; };
 		E5E4B0171D42BEE000AAE2D2 /* CustomKoladaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E4B0161D42BEE000AAE2D2 /* CustomKoladaView.swift */; };
+		E5E4B0191D42BF4C00AAE2D2 /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E4B0181D42BF4C00AAE2D2 /* CustomOverlayView.swift */; };
+		E5E4B01B1D42BF8000AAE2D2 /* BackgroundKolodaAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E4B01A1D42BF8000AAE2D2 /* BackgroundKolodaAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		E5E4B0121D42B33900AAE2D2 /* BackgroundAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundAnimationViewController.swift; sourceTree = "<group>"; };
 		E5E4B0141D42BE4600AAE2D2 /* ExampleOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleOverlayView.swift; sourceTree = "<group>"; };
 		E5E4B0161D42BEE000AAE2D2 /* CustomKoladaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomKoladaView.swift; sourceTree = "<group>"; };
+		E5E4B0181D42BF4C00AAE2D2 /* CustomOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
+		E5E4B01A1D42BF8000AAE2D2 /* BackgroundKolodaAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundKolodaAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 				E5E4B0121D42B33900AAE2D2 /* BackgroundAnimationViewController.swift */,
 				E5E4B0141D42BE4600AAE2D2 /* ExampleOverlayView.swift */,
 				E5E4B0161D42BEE000AAE2D2 /* CustomKoladaView.swift */,
+				E5E4B01A1D42BF8000AAE2D2 /* BackgroundKolodaAnimator.swift */,
+				E5E4B0181D42BF4C00AAE2D2 /* CustomOverlayView.swift */,
 			);
 			path = rateViewController;
 			sourceTree = "<group>";
@@ -250,8 +256,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5E4B01B1D42BF8000AAE2D2 /* BackgroundKolodaAnimator.swift in Sources */,
 				2A163EF91D40422400FC8FE1 /* TopTrendingCell.swift in Sources */,
 				2AD3F3BF1D4008BB000626E5 /* AppDelegate.swift in Sources */,
+				E5E4B0191D42BF4C00AAE2D2 /* CustomOverlayView.swift in Sources */,
 				E5E4B0151D42BE4600AAE2D2 /* ExampleOverlayView.swift in Sources */,
 				2A163EF51D402F6F00FC8FE1 /* TopTrendingViewController.swift in Sources */,
 				E5E4B0171D42BEE000AAE2D2 /* CustomKoladaView.swift in Sources */,
