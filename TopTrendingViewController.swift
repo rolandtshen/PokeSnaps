@@ -13,6 +13,8 @@ import Parse
 
 class TopTrendingViewController: PFQueryTableViewController {
     
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
     override func viewDidLoad() {
         self.loadObjects()
         tableView.reloadData()
@@ -29,13 +31,31 @@ class TopTrendingViewController: PFQueryTableViewController {
             })
         }
     }
+    
+    func getTopLikes() -> NSNumber {
+        let post = Post()
+        let likes = post.likes?.integerValue
+        let dislikes = post.dislikes?.integerValue
+        return likes! - dislikes!
+    }
 
     override func queryForTable() -> PFQuery {
+        
         let query = Post.query()!
-        query.limit = 100;
-        query.orderByDescending("createdAt")
-        query.includeKey("user")
-        return query
+        //top posts
+        if(segmentedControl.selectedSegmentIndex == 0) {
+            query.limit = 50;
+            query.orderByDescending("createdAt")
+            query.includeKey("user")
+            return query
+        }
+        //trending posts
+        else {
+            query.limit = 50;
+            query.orderByDescending("createdAt")
+            query.includeKey("user")
+            return query
+        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell? {
@@ -50,5 +70,6 @@ class TopTrendingViewController: PFQueryTableViewController {
         })
         return cell
     }
+    
 }
     
