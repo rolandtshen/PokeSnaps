@@ -15,6 +15,7 @@ class TopTrendingViewController: PFQueryTableViewController {
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
+
     override func viewDidLoad() {
         self.loadObjects()
         tableView.reloadData()
@@ -74,8 +75,10 @@ class TopTrendingViewController: PFQueryTableViewController {
         })
         return cell
     }
+    
     @IBAction func flagPressed(sender: AnyObject) {
         
     }
+
 }
     
