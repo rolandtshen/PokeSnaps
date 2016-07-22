@@ -10,7 +10,7 @@ target 'PokeSnaps' do
   pod 'Parse'
   pod 'ParseFacebookUtilsV4'
   pod 'ParseUI'
-
+  pod 'DateTools'
   # Pods for PokeSnaps
 
 end
