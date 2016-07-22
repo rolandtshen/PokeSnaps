@@ -55,11 +55,15 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktM-Uw-Y5T">
                                             <rect key="frame" x="564" y="12" width="24" height="24"/>
                                             <state key="normal" image="ic_flag"/>
+                                            <connections>
+                                                <action selector="flagPressed:" destination="RVs-W6-MNs" eventType="touchUpInside" id="r1h-Lw-kZC"/>
+                                            </connections>
                                         </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iHI-Nu-AGo">
                                             <rect key="frame" x="0.0" y="49" width="600" height="405"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="348" id="CvA-MM-zi0"/>
+                                                <constraint firstAttribute="height" constant="405" id="eqb-VX-lU7"/>
                                                 <constraint firstAttribute="height" constant="352" id="ers-oa-jnM"/>
                                             </constraints>
                                             <variation key="default">

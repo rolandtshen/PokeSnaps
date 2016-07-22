@@ -38,6 +38,10 @@ class TopTrendingViewController: PFQueryTableViewController {
         let dislikes = post.dislikes?.integerValue
         return likes! - dislikes!
     }
+    
+//    func getTrendingLikes() -> NSNumber {
+//        let post = Post()
+//    }
 
     override func queryForTable() -> PFQuery {
         
@@ -70,6 +74,8 @@ class TopTrendingViewController: PFQueryTableViewController {
         })
         return cell
     }
-    
+    @IBAction func flagPressed(sender: AnyObject) {
+        
+    }
 }
     
