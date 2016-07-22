@@ -18,6 +18,8 @@
 		3108559CE57098FFFC417D6F /* Pods_PokeSnaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC5464C957ABD16978127A4 /* Pods_PokeSnaps.framework */; };
 		E5E4B00F1D42B0C000AAE2D2 /* RateViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5E4B00E1D42B0C000AAE2D2 /* RateViewController.storyboard */; };
 		E5E4B0131D42B33900AAE2D2 /* BackgroundAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E4B0121D42B33900AAE2D2 /* BackgroundAnimationViewController.swift */; };
+		E5E4B0151D42BE4600AAE2D2 /* ExampleOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E4B0141D42BE4600AAE2D2 /* ExampleOverlayView.swift */; };
+		E5E4B0171D42BEE000AAE2D2 /* CustomKoladaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E4B0161D42BEE000AAE2D2 /* CustomKoladaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		BFD1CC1A2B905199A93F3A8A /* Pods-PokeSnaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeSnaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeSnaps/Pods-PokeSnaps.release.xcconfig"; sourceTree = "<group>"; };
 		E5E4B00E1D42B0C000AAE2D2 /* RateViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RateViewController.storyboard; sourceTree = "<group>"; };
 		E5E4B0121D42B33900AAE2D2 /* BackgroundAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundAnimationViewController.swift; sourceTree = "<group>"; };
+		E5E4B0141D42BE4600AAE2D2 /* ExampleOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleOverlayView.swift; sourceTree = "<group>"; };
+		E5E4B0161D42BEE000AAE2D2 /* CustomKoladaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomKoladaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 			children = (
 				E5E4B00E1D42B0C000AAE2D2 /* RateViewController.storyboard */,
 				E5E4B0121D42B33900AAE2D2 /* BackgroundAnimationViewController.swift */,
+				E5E4B0141D42BE4600AAE2D2 /* ExampleOverlayView.swift */,
+				E5E4B0161D42BEE000AAE2D2 /* CustomKoladaView.swift */,
 			);
 			path = rateViewController;
 			sourceTree = "<group>";
@@ -246,7 +252,9 @@
 			files = (
 				2A163EF91D40422400FC8FE1 /* TopTrendingCell.swift in Sources */,
 				2AD3F3BF1D4008BB000626E5 /* AppDelegate.swift in Sources */,
+				E5E4B0151D42BE4600AAE2D2 /* ExampleOverlayView.swift in Sources */,
 				2A163EF51D402F6F00FC8FE1 /* TopTrendingViewController.swift in Sources */,
+				E5E4B0171D42BEE000AAE2D2 /* CustomKoladaView.swift in Sources */,
 				2A163EFD1D413C9400FC8FE1 /* Post.swift in Sources */,
 				E5E4B0131D42B33900AAE2D2 /* BackgroundAnimationViewController.swift in Sources */,
 			);
