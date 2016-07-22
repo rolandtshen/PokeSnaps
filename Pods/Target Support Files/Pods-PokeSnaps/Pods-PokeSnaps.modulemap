@@ -1,6 +1,0 @@
-framework module Pods_PokeSnaps {
-  umbrella header "Pods-PokeSnaps-umbrella.h"
-
-  export *
-  module * { export * }
-}
