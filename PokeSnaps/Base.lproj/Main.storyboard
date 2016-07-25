@@ -34,12 +34,13 @@
                     </tabBar>
                     <connections>
                         <segue destination="6G1-34-rwg" kind="relationship" relationship="viewControllers" id="1Gm-Pi-ZWd"/>
+                        <segue destination="a3n-p4-MFP" kind="relationship" relationship="viewControllers" id="Ula-RL-qLH"/>
                         <segue destination="RM0-km-bez" kind="relationship" relationship="viewControllers" id="RrG-fF-0I0"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ypo-MQ-ieL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="436"/>
+            <point key="canvasLocation" x="5" y="366"/>
         </scene>
         <!--UserProfile-->
         <scene sceneID="cV5-JW-a4O">
@@ -65,9 +66,22 @@
             </objects>
             <point key="canvasLocation" x="483" y="436"/>
         </scene>
+        <!--RateViewController-->
+        <scene sceneID="3tS-8q-IQU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RateViewController" id="a3n-p4-MFP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="rate@1x" id="yhF-M5-AJQ">
+                        <inset key="imageInsets" minX="3" minY="7" maxX="-3" maxY="-7"/>
+                    </tabBarItem>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pSE-pn-Yge" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="488.5" y="541"/>
+        </scene>
     </scenes>
     <resources>
         <image name="home@1x" width="40" height="40"/>
+        <image name="rate@1x" width="40" height="40"/>
         <image name="userprofile@1x" width="40" height="40"/>
     </resources>
 </document>
