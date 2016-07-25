@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "00E66B7D490B9ACCAD66206ED0D6687EA2943D8B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "00E66B7D490B9ACCAD66206ED0D6687EA2943D8B" : 0,
+    "231114403EF15DED09DE9577FA23E6D43184B00E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3A411AD5-F164-47DD-A26B-3D3BC770BF84",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "00E66B7D490B9ACCAD66206ED0D6687EA2943D8B" : "PokeSnaps\/",
+    "231114403EF15DED09DE9577FA23E6D43184B00E" : "Koloda\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "PokeSnaps",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "PokeSnaps.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rolandtshen\/PokeSnaps.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "00E66B7D490B9ACCAD66206ED0D6687EA2943D8B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Yalantis\/Koloda.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "231114403EF15DED09DE9577FA23E6D43184B00E"
+    }
+  ]
+}

@@ -9,6 +9,8 @@
 import UIKit
 import Koloda
 import pop
+import Parse
+
 
 private let numberOfCards: UInt = 5
 private let frameAnimationSpringBounciness: CGFloat = 9
@@ -20,6 +22,9 @@ class BackgroundAnimationViewController: UIViewController {
     
     @IBOutlet weak var kolodaView: CustomKolodaView!
     
+    var posts: [Post] = []
+    
+    
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +34,9 @@ class BackgroundAnimationViewController: UIViewController {
         kolodaView.dataSource = self
         kolodaView.animator = BackgroundKolodaAnimator(koloda: kolodaView)
         
+
         self.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
     }
-    
     
     //MARK: IBActions
     @IBAction func leftButtonTapped() {
@@ -78,18 +83,27 @@ extension BackgroundAnimationViewController: KolodaViewDelegate {
     }
 }
 
+//var image: UIImage = UIImage
+
 //MARK: KolodaViewDataSource
 extension BackgroundAnimationViewController: KolodaViewDataSource {
+    
+    @NSManaged var imageFile: PFFile?
     
     func kolodaNumberOfCards(koloda: KolodaView) -> UInt {
         return numberOfCards
     }
     
     func koloda(koloda: KolodaView, viewForCardAtIndex index: UInt) -> UIView {
-        return UIImageView(image: UIImage(named: "cards_\(index + 1)"))
+        
+        g
+        return UIImageView(image: UIImage(named: "image"))
+        
     }
     
     func koloda(koloda: KolodaView, viewForCardOverlayAtIndex index: UInt) -> OverlayView? {
+        
+        
         return NSBundle.mainBundle().loadNibNamed("CustomOverlayView",
                                                   owner: self, options: nil)[0] as? OverlayView
     }

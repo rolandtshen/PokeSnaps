@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="J4u-tk-hE2">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,7 +8,7 @@
         <!--Background Animation View Controller-->
         <scene sceneID="u93-OE-96R">
             <objects>
-                <viewController id="J4u-tk-hE2" customClass="BackgroundAnimationViewController" customModule="Koloda_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="J4u-tk-hE2" customClass="BackgroundAnimationViewController" customModule="PokeSnaps" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xa6-Ww-5nF"/>
                         <viewControllerLayoutGuide type="bottom" id="p88-2l-tTE"/>
@@ -17,10 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Eu-qY-xUs" customClass="CustomKolodaView" customModule="Koloda_Example" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="74" width="320" height="494"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mi5-47-Fqc">
                                 <rect key="frame" x="76" y="504" width="34" height="34"/>
                                 <state key="normal" image="ic_skip">
@@ -30,7 +26,7 @@
                                     <action selector="leftButtonTapped" destination="J4u-tk-hE2" eventType="touchUpInside" id="WkJ-w2-uYJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vz9-RI-uPK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vz9-RI-uPK">
                                 <rect key="frame" x="211" y="505" width="38" height="34"/>
                                 <state key="normal" image="ic_like">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -42,13 +38,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVX-cR-5So">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHg-hp-vZh">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHg-hp-vZh">
                                         <rect key="frame" x="15" y="40" width="21" height="22"/>
                                         <state key="normal" image="ic_koloda">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8e-aa-JFM">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8e-aa-JFM">
                                         <rect key="frame" x="284" y="40" width="21" height="22"/>
                                         <state key="normal" image="ic_undo">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -57,34 +53,38 @@
                                             <action selector="undoButtonTapped" destination="J4u-tk-hE2" eventType="touchUpInside" id="qsu-x9-FoE"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="New in Gallery" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RoE-z1-OdK">
-                                        <rect key="frame" x="105" y="39" width="112" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RoE-z1-OdK">
+                                        <rect key="frame" x="123" y="40" width="75" height="22"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.80392156859999997" green="0.26274509800000001" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.26280490028063741" green="0.65761960966348398" blue="0.75050950050354004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="74" id="01d-De-gGY"/>
                                     <constraint firstAttribute="bottom" secondItem="fHg-hp-vZh" secondAttribute="bottom" constant="12" id="1DW-Qm-lOh"/>
                                     <constraint firstItem="fHg-hp-vZh" firstAttribute="leading" secondItem="HVX-cR-5So" secondAttribute="leading" constant="15" id="9IA-AW-Rjs"/>
                                     <constraint firstAttribute="bottom" secondItem="Q8e-aa-JFM" secondAttribute="bottom" constant="12" id="Eo8-pg-lei"/>
-                                    <constraint firstAttribute="centerX" secondItem="RoE-z1-OdK" secondAttribute="centerX" id="aQq-sX-4IQ"/>
-                                    <constraint firstAttribute="bottom" secondItem="RoE-z1-OdK" secondAttribute="bottom" constant="14" id="rlO-6d-NSa"/>
+                                    <constraint firstAttribute="centerX" secondItem="RoE-z1-OdK" secondAttribute="centerX" constant="-0.5" id="aQq-sX-4IQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="RoE-z1-OdK" secondAttribute="bottom" constant="12" id="rlO-6d-NSa"/>
                                     <constraint firstAttribute="trailing" secondItem="Q8e-aa-JFM" secondAttribute="trailing" constant="15" id="t35-oX-NVf"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jOK-cB-fLJ">
                                 <rect key="frame" x="160" y="504" width="1" height="34"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="fxt-LM-oXP"/>
                                     <constraint firstAttribute="width" constant="1" id="mZO-sh-qKb"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Eu-qY-xUs" customClass="CustomKolodaView" customModule="PokeSnaps" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="74" width="320" height="494"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.96470588239999999" green="0.18039215689999999" blue="0.20000000000000001" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.050609730331791038" green="0.53384703506704811" blue="0.94260978698730469" alpha="0.75" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="3Eu-qY-xUs" firstAttribute="top" secondItem="HVX-cR-5So" secondAttribute="bottom" id="733-jK-8Dl"/>
                             <constraint firstItem="HVX-cR-5So" firstAttribute="top" secondItem="kiE-5y-PQU" secondAttribute="top" id="L5E-gd-Gsy"/>
@@ -118,9 +118,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_koloda" width="34" height="34"/>
-        <image name="ic_like" width="34" height="34"/>
+        <image name="ic_koloda" width="21" height="21"/>
+        <image name="ic_like" width="38" height="34"/>
         <image name="ic_skip" width="34" height="34"/>
-        <image name="ic_undo" width="34" height="34"/>
+        <image name="ic_undo" width="21" height="21"/>
     </resources>
 </document>
