@@ -33,7 +33,7 @@
 		2A163EF41D402F6F00FC8FE1 /* TopTrendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopTrendingViewController.swift; sourceTree = "<group>"; };
 		2A163EF61D402F7E00FC8FE1 /* TopTrending.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TopTrending.storyboard; sourceTree = "<group>"; };
 		2A163EF81D40422400FC8FE1 /* TopTrendingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopTrendingCell.swift; sourceTree = "<group>"; };
-		2A163EFC1D413C9400FC8FE1 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = ../Post.swift; sourceTree = "<group>"; };
+		2A163EFC1D413C9400FC8FE1 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		2AD3F3BB1D4008BB000626E5 /* PokeSnaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeSnaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AD3F3BE1D4008BB000626E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AD3F3C31D4008BB000626E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,6 +68,7 @@
 		2A163EF31D402F4A00FC8FE1 /* TopTrending */ = {
 			isa = PBXGroup;
 			children = (
+				2A163EFC1D413C9400FC8FE1 /* Post.swift */,
 				2A163EF41D402F6F00FC8FE1 /* TopTrendingViewController.swift */,
 				2A163EF61D402F7E00FC8FE1 /* TopTrending.storyboard */,
 				2A163EF81D40422400FC8FE1 /* TopTrendingCell.swift */,
@@ -127,7 +128,6 @@
 				E5E4B0181D42BF4C00AAE2D2 /* CustomOverlayView.swift */,
 				E5923ACE1D467368008F27B3 /* CustomOverlayView.xib */,
 				E5923AD01D467377008F27B3 /* OverlayView.xib */,
-				2A163EFC1D413C9400FC8FE1 /* Post.swift */,
 			);
 			path = rateViewController;
 			sourceTree = "<group>";

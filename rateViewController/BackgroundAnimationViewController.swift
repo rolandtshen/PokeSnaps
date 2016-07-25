@@ -33,7 +33,8 @@ class BackgroundAnimationViewController: UIViewController {
         kolodaView.delegate = self
         kolodaView.dataSource = self
         kolodaView.animator = BackgroundKolodaAnimator(koloda: kolodaView)
-        
+     
+
 
         self.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
     }
@@ -83,7 +84,7 @@ extension BackgroundAnimationViewController: KolodaViewDelegate {
     }
 }
 
-//var image: UIImage = UIImage
+
 
 //MARK: KolodaViewDataSource
 extension BackgroundAnimationViewController: KolodaViewDataSource {
@@ -96,7 +97,12 @@ extension BackgroundAnimationViewController: KolodaViewDataSource {
     
     func koloda(koloda: KolodaView, viewForCardAtIndex index: UInt) -> UIView {
         
-        g
+        ParseHelper.timelineRequestForCurrentUser { (result: [PFObject]?, error: NSError?) -> Void in
+            self.posts = result as? [Post] ?? []
+            let image = self.posts[0].downloadImage()
+        }
+
+        
         return UIImageView(image: UIImage(named: "image"))
         
     }
