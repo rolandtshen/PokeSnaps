@@ -18,6 +18,9 @@ class TopTrendingViewController: PFQueryTableViewController {
     override func viewDidLoad() {
         self.loadObjects()
         tableView.reloadData()
+        
+        tableView.layoutMargins = UIEdgeInsetsZero
+        tableView.separatorInset = UIEdgeInsetsZero
     }
     
     func getImage(object: PFObject, completionHandler: (UIImage) -> Void) {

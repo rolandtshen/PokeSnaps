@@ -22,32 +22,38 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="499"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRL-Wn-1fY">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRL-Wn-1fY">
                                             <rect key="frame" x="16" y="16" width="76" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_thumb_up" translatesAutoresizingMaskIntoConstraints="NO" id="IzW-pD-ab6">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="like" translatesAutoresizingMaskIntoConstraints="NO" id="IzW-pD-ab6">
                                             <rect key="frame" x="12" y="462" width="40" height="27"/>
                                             <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="0RB-MM-r8R"/>
+                                                <constraint firstAttribute="height" constant="20" id="Pp8-hq-FTL"/>
                                                 <constraint firstAttribute="width" constant="40" id="b0J-pl-HFV"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSc-JQ-K6v">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSc-JQ-K6v">
                                             <rect key="frame" x="52" y="466" width="34" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktM-Uw-Y5T">
-                                            <rect key="frame" x="564" y="12" width="24" height="24"/>
-                                            <state key="normal" image="ic_flag"/>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktM-Uw-Y5T" userLabel="Flag">
+                                            <rect key="frame" x="570" y="18" width="18" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="18" id="cR9-0I-k03"/>
+                                                <constraint firstAttribute="width" constant="18" id="kRd-y5-wE7"/>
+                                            </constraints>
+                                            <state key="normal" image="flag"/>
                                             <connections>
                                                 <action selector="flagPressed:" destination="RVs-W6-MNs" eventType="touchUpInside" id="r1h-Lw-kZC"/>
                                             </connections>
                                         </button>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iHI-Nu-AGo">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iHI-Nu-AGo">
                                             <rect key="frame" x="0.0" y="49" width="600" height="405"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="348" id="CvA-MM-zi0"/>
@@ -66,16 +72,15 @@
                                         <constraint firstItem="RRL-Wn-1fY" firstAttribute="leading" secondItem="lBY-Hx-qgs" secondAttribute="leadingMargin" constant="8" id="0y8-vS-7UV"/>
                                         <constraint firstItem="IzW-pD-ab6" firstAttribute="leading" secondItem="lBY-Hx-qgs" secondAttribute="leading" constant="12" id="3lW-64-tmA"/>
                                         <constraint firstItem="jSc-JQ-K6v" firstAttribute="top" secondItem="iHI-Nu-AGo" secondAttribute="bottom" constant="12" id="8en-S8-FGr"/>
-                                        <constraint firstItem="ktM-Uw-Y5T" firstAttribute="top" secondItem="lBY-Hx-qgs" secondAttribute="top" constant="12" id="96b-FK-4jo"/>
                                         <constraint firstAttribute="bottom" secondItem="iHI-Nu-AGo" secondAttribute="bottom" id="G2j-tn-m1g"/>
+                                        <constraint firstItem="ktM-Uw-Y5T" firstAttribute="centerY" secondItem="RRL-Wn-1fY" secondAttribute="centerY" id="GzA-Yx-bg6"/>
                                         <constraint firstItem="iHI-Nu-AGo" firstAttribute="leading" secondItem="lBY-Hx-qgs" secondAttribute="leading" id="Qrc-Cq-pHu"/>
                                         <constraint firstAttribute="bottom" secondItem="jSc-JQ-K6v" secondAttribute="bottom" constant="12" id="WQ9-zn-Kyz"/>
                                         <constraint firstItem="iHI-Nu-AGo" firstAttribute="top" secondItem="RRL-Wn-1fY" secondAttribute="bottom" constant="12" id="X6y-cb-i96"/>
-                                        <constraint firstAttribute="trailing" secondItem="ktM-Uw-Y5T" secondAttribute="trailing" constant="12" id="cWv-RC-hyC"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ktM-Uw-Y5T" secondAttribute="trailing" constant="4" id="eFR-MT-5jS"/>
                                         <constraint firstItem="RRL-Wn-1fY" firstAttribute="top" secondItem="lBY-Hx-qgs" secondAttribute="topMargin" constant="8" id="elJ-sj-Bsm"/>
                                         <constraint firstAttribute="bottom" secondItem="IzW-pD-ab6" secondAttribute="bottom" constant="10" id="fEH-Af-lyo"/>
                                         <constraint firstItem="IzW-pD-ab6" firstAttribute="top" secondItem="iHI-Nu-AGo" secondAttribute="bottom" constant="8" id="iKl-E1-DhQ"/>
-                                        <constraint firstItem="iHI-Nu-AGo" firstAttribute="top" secondItem="ktM-Uw-Y5T" secondAttribute="bottom" constant="13" id="pfM-C1-k6z"/>
                                         <constraint firstItem="jSc-JQ-K6v" firstAttribute="leading" secondItem="IzW-pD-ab6" secondAttribute="trailing" id="sLk-pX-rhp"/>
                                         <constraint firstAttribute="trailing" secondItem="iHI-Nu-AGo" secondAttribute="trailing" id="vEq-sO-qTV"/>
                                     </constraints>
@@ -85,6 +90,7 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
                                 <connections>
                                     <outlet property="likesLabel" destination="jSc-JQ-K6v" id="XOW-OT-zD5"/>
                                     <outlet property="postImage" destination="iHI-Nu-AGo" id="3D8-7q-Mwi"/>
@@ -97,6 +103,9 @@
                             <outlet property="delegate" destination="RVs-W6-MNs" id="iSQ-mZ-K6Y"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="" image="home@1x" id="Lcc-lx-PZi">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="4Io-iS-o9V">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="cTK-rL-Tw8">
@@ -106,15 +115,17 @@
                                 <segment title="Top"/>
                                 <segment title="Trending"/>
                             </segments>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </segmentedControl>
                     </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="segmentedControl" destination="cTK-rL-Tw8" id="9tU-cx-zRw"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybc-7h-scN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2198" y="773"/>
+            <point key="canvasLocation" x="2292" y="369"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gDF-YV-Pxo">
@@ -124,6 +135,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="q9p-EU-6ct">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -132,11 +144,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LZx-UU-aiU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1513" y="773"/>
+            <point key="canvasLocation" x="1507" y="369"/>
         </scene>
     </scenes>
     <resources>
-        <image name="ic_flag" width="24" height="24"/>
-        <image name="ic_thumb_up" width="24" height="24"/>
+        <image name="flag" width="28" height="28"/>
+        <image name="home@1x" width="40" height="40"/>
+        <image name="like" width="85" height="85"/>
     </resources>
 </document>

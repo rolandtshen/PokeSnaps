@@ -14,6 +14,5 @@ class TopTrendingCell: PFTableViewCell {
 
     @IBOutlet weak var postImage: UIImageView!
     @IBOutlet weak var likesLabel: UILabel!
-    @IBOutlet weak var dislikesLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
 }
