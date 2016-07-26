@@ -51,15 +51,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVX-cR-5So">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHg-hp-vZh">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHg-hp-vZh">
                                         <rect key="frame" x="15" y="40" width="21" height="22"/>
-                                        <state key="normal" image="ic_koloda">
+                                        <state key="normal" image="ic_flag">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8e-aa-JFM">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8e-aa-JFM">
                                         <rect key="frame" x="284" y="40" width="21" height="22"/>
-                                        <state key="normal" image="ic_undo">
+                                        <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -136,8 +136,7 @@
     </scenes>
     <resources>
         <image name="dislike" width="85" height="85"/>
-        <image name="ic_koloda" width="21" height="21"/>
-        <image name="ic_undo" width="21" height="21"/>
+        <image name="ic_flag" width="24" height="24"/>
         <image name="like" width="85" height="85"/>
         <image name="rate@1x" width="40" height="40"/>
     </resources>

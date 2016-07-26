@@ -35,6 +35,7 @@
                     <connections>
                         <segue destination="6G1-34-rwg" kind="relationship" relationship="viewControllers" id="1Gm-Pi-ZWd"/>
                         <segue destination="a3n-p4-MFP" kind="relationship" relationship="viewControllers" id="Ula-RL-qLH"/>
+                        <segue destination="MLP-ie-Xfg" kind="relationship" relationship="viewControllers" id="iHG-7y-y2x"/>
                         <segue destination="RM0-km-bez" kind="relationship" relationship="viewControllers" id="RrG-fF-0I0"/>
                     </connections>
                 </tabBarController>
@@ -78,8 +79,21 @@
             </objects>
             <point key="canvasLocation" x="488.5" y="541"/>
         </scene>
+        <!--CameraFunc-->
+        <scene sceneID="Rrt-ZE-Hfc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CameraFunc" id="MLP-ie-Xfg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="camera@1x" id="GSI-17-6cL">
+                        <inset key="imageInsets" minX="3" minY="8" maxX="-3" maxY="-8"/>
+                    </tabBarItem>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mfW-Wf-vzz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="454" y="662"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="camera@1x" width="40" height="40"/>
         <image name="home@1x" width="40" height="40"/>
         <image name="rate@1x" width="40" height="40"/>
         <image name="userprofile@1x" width="40" height="40"/>

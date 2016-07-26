@@ -22,19 +22,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         Parse.initializeWithConfiguration(configuration)
         
-        do {
-            try PFUser.logInWithUsername("test", password: "test")
-        } catch {
-            print("Unable to log in")
-        }
+        let acl = PFACL()
+        acl.publicReadAccess = true
+        PFACL.setDefaultACL(acl, withAccessForCurrentUser: true)
         
-        if let currentUser = PFUser.currentUser() {
-            print("\(currentUser.username!) logged in successfully")
-        } else {
-            print("No logged in user :(")
-        }
-        Post.registerSubclass()
+        
         return true
+        
+//        do {
+//            try PFUser.logInWithUsername("test", password: "test")
+//        } catch {
+//            print("Unable to log in")
+//        }
+//        
+//        if let currentUser = PFUser.currentUser() {
+//            print("\(currentUser.username!) logged in successfully")
+//        } else {
+//            print("No logged in user :(")
+//        }
+//        Post.registerSubclass()
+//        return true
     }
 
     func applicationWillResignActive(application: UIApplication) {

@@ -8,18 +8,20 @@
 
 import UIKit
 import Parse
+import ParseUI
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collection: UICollectionView!
+    @IBOutlet weak var nameLbl: UILabel!
+    var posts: [Post] = []
     
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
         collection.delegate = self
         collection.dataSource = self
-        
+        nameLbl.text = PFUser.currentUser()?.username
+        collection.reloadData()
         
     }
     
@@ -34,9 +36,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
+    
+    
     func getImage(object: PFObject, completionHandler: (UIImage) -> Void) {
-        let question = object as! Post
-        if let picture = question.imageFile {
+        let image = object as! Post
+        if let picture = image.imageFile {
             picture.getDataInBackgroundWithBlock({
                 (imageData: NSData?, error: NSError?) -> Void in
                 if (error == nil) {
@@ -48,18 +52,27 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let post = Post()
-        if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PostCellIdentifier", forIndexPath: indexPath) as? PostCell {
+        if let cell = collection.dequeueReusableCellWithReuseIdentifier("PostCellIdentifier", forIndexPath: indexPath) as? PostCell {
+            ParseHelper.queryPost{ (post) in
+                self.posts = post
+                print(self.posts[indexPath.item].image)
+            }
+            let postImage = self.posts[indexPath.item].image
             
+            
+
             getImage(post, completionHandler: { (image) in
                 cell.imageView.image = image
+                print("\(image) + asdsadasdasdaadsd")
             })
             
             return cell
+
         }
         else {
-            
-            return UICollectionViewCell()
+
         }
+        return UICollectionViewCell()
     }
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sbN-Kq-zFR">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Camera Func View Controller-->
+        <scene sceneID="rbu-Dm-AJg">
+            <objects>
+                <viewController id="sbN-Kq-zFR" customClass="CameraFuncViewController" customModule="PokeSnaps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nT5-bz-g4d"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rg3-ld-6mL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JyF-tp-sj2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" image="camera@1x" id="eZc-Ju-DP8">
+                        <inset key="imageInsets" minX="3" minY="7" maxX="-3" maxY="-7"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3OG-3V-IrY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973" y="272"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera@1x" width="40" height="40"/>
+    </resources>
+</document>

@@ -42,14 +42,14 @@ class TopTrendingViewController: PFQueryTableViewController {
             query.limit = 50;
             query.orderByDescending("likes")
             query.includeKey("user")
-            return query
         }
         //trending posts
         else {
             query.whereKey("createdAt", greaterThan: NSCalendar.currentCalendar().isDateInYesterday(NSDate()))
             query.orderByDescending("likes")
-            return query
         }
+        query.includeKey("fromUser")
+        return query
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell? {

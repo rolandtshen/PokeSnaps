@@ -12,6 +12,15 @@
 		096E95741D42DD7400CDCF22 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 096E956F1D42DD7400CDCF22 /* UserProfile.storyboard */; };
 		096E95751D42DD7400CDCF22 /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096E95701D42DD7400CDCF22 /* UserProfileVC.swift */; };
 		096E95781D43E56000CDCF22 /* PokemonFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 096E95771D43E56000CDCF22 /* PokemonFont.ttf */; };
+		09D364D11D47DA3E00898C95 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D364D01D47DA3E00898C95 /* LoginVC.swift */; };
+		09D364D31D47DA5400898C95 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09D364D21D47DA5400898C95 /* Login.storyboard */; };
+		09D364D51D47DA5F00898C95 /* SignUpVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09D364D41D47DA5F00898C95 /* SignUpVC.storyboard */; };
+		09D364D71D47DA7000898C95 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D364D61D47DA7000898C95 /* SignUpVC.swift */; };
+		09D364D91D47DAEE00898C95 /* TOS-EULA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D364D81D47DAEE00898C95 /* TOS-EULA.swift */; };
+		09D364DB1D47DB1A00898C95 /* TOSEULA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09D364DA1D47DB1A00898C95 /* TOSEULA.storyboard */; };
+		09E85AD61D46D9B3009603BE /* CameraFunc.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E85AD31D46D9B3009603BE /* CameraFunc.storyboard */; };
+		09E85AD71D46D9B3009603BE /* CameraFuncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E85AD41D46D9B3009603BE /* CameraFuncViewController.swift */; };
+		09E85AD81D46D9B3009603BE /* PhotoTakingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E85AD51D46D9B3009603BE /* PhotoTakingHelper.swift */; };
 		09E8B3B31D46C68600401A8E /* BackgroundAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E8B3AA1D46C68600401A8E /* BackgroundAnimationViewController.swift */; };
 		09E8B3B41D46C68600401A8E /* BackgroundKolodaAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E8B3AB1D46C68600401A8E /* BackgroundKolodaAnimator.swift */; };
 		09E8B3B51D46C68600401A8E /* CustomKoladaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E8B3AC1D46C68600401A8E /* CustomKoladaView.swift */; };
@@ -38,6 +47,16 @@
 		096E956F1D42DD7400CDCF22 /* UserProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
 		096E95701D42DD7400CDCF22 /* UserProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 		096E95771D43E56000CDCF22 /* PokemonFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PokemonFont.ttf; sourceTree = "<group>"; };
+		09D364D01D47DA3E00898C95 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		09D364D21D47DA5400898C95 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		09D364D41D47DA5F00898C95 /* SignUpVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUpVC.storyboard; sourceTree = "<group>"; };
+		09D364D61D47DA7000898C95 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		09D364D81D47DAEE00898C95 /* TOS-EULA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TOS-EULA.swift"; sourceTree = "<group>"; };
+		09D364DA1D47DB1A00898C95 /* TOSEULA.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TOSEULA.storyboard; sourceTree = "<group>"; };
+		09E737F41D46E18400E224BA /* PokeSnaps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PokeSnaps-Bridging-Header.h"; sourceTree = "<group>"; };
+		09E85AD31D46D9B3009603BE /* CameraFunc.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CameraFunc.storyboard; sourceTree = "<group>"; };
+		09E85AD41D46D9B3009603BE /* CameraFuncViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraFuncViewController.swift; sourceTree = "<group>"; };
+		09E85AD51D46D9B3009603BE /* PhotoTakingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTakingHelper.swift; sourceTree = "<group>"; };
 		09E8B3AA1D46C68600401A8E /* BackgroundAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundAnimationViewController.swift; sourceTree = "<group>"; };
 		09E8B3AB1D46C68600401A8E /* BackgroundKolodaAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundKolodaAnimator.swift; sourceTree = "<group>"; };
 		09E8B3AC1D46C68600401A8E /* CustomKoladaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomKoladaView.swift; sourceTree = "<group>"; };
@@ -93,6 +112,43 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		09D364CB1D47D98600898C95 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				09D364D01D47DA3E00898C95 /* LoginVC.swift */,
+				09D364D21D47DA5400898C95 /* Login.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		09D364CE1D47D9DB00898C95 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				09D364D41D47DA5F00898C95 /* SignUpVC.storyboard */,
+				09D364D61D47DA7000898C95 /* SignUpVC.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		09D364CF1D47D9E700898C95 /* TOS-EULA */ = {
+			isa = PBXGroup;
+			children = (
+				09D364D81D47DAEE00898C95 /* TOS-EULA.swift */,
+				09D364DA1D47DB1A00898C95 /* TOSEULA.storyboard */,
+			);
+			path = "TOS-EULA";
+			sourceTree = "<group>";
+		};
+		09E85AD21D46D9B3009603BE /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				09E85AD31D46D9B3009603BE /* CameraFunc.storyboard */,
+				09E85AD41D46D9B3009603BE /* CameraFuncViewController.swift */,
+				09E85AD51D46D9B3009603BE /* PhotoTakingHelper.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
 		09E8B3A91D46C68600401A8E /* rateViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +179,11 @@
 		2AD3F3B21D4008BB000626E5 = {
 			isa = PBXGroup;
 			children = (
+				09D364CF1D47D9E700898C95 /* TOS-EULA */,
+				09D364CE1D47D9DB00898C95 /* SignUp */,
+				09D364CB1D47D98600898C95 /* Login */,
+				09E737F41D46E18400E224BA /* PokeSnaps-Bridging-Header.h */,
+				09E85AD21D46D9B3009603BE /* Camera */,
 				09E8B3A91D46C68600401A8E /* rateViewController */,
 				096E956B1D42DD7400CDCF22 /* UserProfile */,
 				2A163EF31D402F4A00FC8FE1 /* TopTrending */,
@@ -234,12 +295,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				09E8B3BB1D46C68600401A8E /* RateViewController.storyboard in Resources */,
+				09D364D31D47DA5400898C95 /* Login.storyboard in Resources */,
+				09E85AD61D46D9B3009603BE /* CameraFunc.storyboard in Resources */,
 				09E8B3B71D46C68600401A8E /* CustomOverlayView.xib in Resources */,
 				2AD3F3C91D4008BB000626E5 /* LaunchScreen.storyboard in Resources */,
 				2AD3F3C61D4008BB000626E5 /* Assets.xcassets in Resources */,
 				2AD3F3C41D4008BB000626E5 /* Main.storyboard in Resources */,
 				096E95781D43E56000CDCF22 /* PokemonFont.ttf in Resources */,
 				09E8B3B91D46C68600401A8E /* OverlayView.xib in Resources */,
+				09D364DB1D47DB1A00898C95 /* TOSEULA.storyboard in Resources */,
+				09D364D51D47DA5F00898C95 /* SignUpVC.storyboard in Resources */,
 				2A163EF71D402F7E00FC8FE1 /* TopTrending.storyboard in Resources */,
 				096E95741D42DD7400CDCF22 /* UserProfile.storyboard in Resources */,
 			);
@@ -305,14 +370,19 @@
 				096E95731D42DD7400CDCF22 /* PostScrollVC.swift in Sources */,
 				09E8B3B31D46C68600401A8E /* BackgroundAnimationViewController.swift in Sources */,
 				2A163EF91D40422400FC8FE1 /* TopTrendingCell.swift in Sources */,
+				09E85AD71D46D9B3009603BE /* CameraFuncViewController.swift in Sources */,
+				09E85AD81D46D9B3009603BE /* PhotoTakingHelper.swift in Sources */,
 				2AD3F3BF1D4008BB000626E5 /* AppDelegate.swift in Sources */,
 				2A163EF51D402F6F00FC8FE1 /* TopTrendingViewController.swift in Sources */,
 				09E8B3B61D46C68600401A8E /* CustomOverlayView.swift in Sources */,
+				09D364D11D47DA3E00898C95 /* LoginVC.swift in Sources */,
 				09E8B3B81D46C68600401A8E /* ExampleOverlayView.swift in Sources */,
 				2A163EFD1D413C9400FC8FE1 /* Post.swift in Sources */,
 				096E95721D42DD7400CDCF22 /* PostCell.swift in Sources */,
 				09E8B3BA1D46C68600401A8E /* ParseHelper.swift in Sources */,
+				09D364D91D47DAEE00898C95 /* TOS-EULA.swift in Sources */,
 				096E95751D42DD7400CDCF22 /* UserProfileVC.swift in Sources */,
+				09D364D71D47DA7000898C95 /* SignUpVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

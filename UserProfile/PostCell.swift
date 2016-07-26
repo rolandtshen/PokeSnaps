@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import Parse
 
 class PostCell: UICollectionViewCell {
     
     @IBOutlet weak var likes:UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    
+
+    
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

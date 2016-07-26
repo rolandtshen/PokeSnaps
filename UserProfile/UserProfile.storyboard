@@ -134,8 +134,9 @@
                                                         <segue destination="Xg0-5g-KQp" kind="show" id="YlA-lz-yM7"/>
                                                     </connections>
                                                 </button>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reddituserskennygjpg-19af08_765w" translatesAutoresizingMaskIntoConstraints="NO" id="w2T-fm-UbH">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w2T-fm-UbH" customClass="PFImageView">
                                                     <rect key="frame" x="0.0" y="0.0" width="121" height="105"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="PostCellIdentifier"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="EuX-fK-9MX"/>
                                                         <constraint firstAttribute="height" constant="105" id="v16-IR-1lG"/>
@@ -208,6 +209,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collection" destination="WNW-Dy-KRY" id="ZLN-F9-FSh"/>
+                        <outlet property="nameLbl" destination="ulg-Az-1cA" id="iM6-Ug-C8K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c4u-Li-kmf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -366,7 +368,6 @@
         <image name="bg" width="1920" height="1200"/>
         <image name="ellipsis" width="128" height="128"/>
         <image name="ic_thumb_up" width="24" height="24"/>
-        <image name="reddituserskennygjpg-19af08_765w" width="765" height="1360"/>
         <image name="userprofile@1x" width="40" height="40"/>
     </resources>
 </document>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8YN-Cy-kwO">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Terms And Conditions-->
+        <scene sceneID="NQw-oQ-uEv">
+            <objects>
+                <viewController id="8YN-Cy-kwO" customClass="TermsAndConditions" customModule="PokeSnaps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="crR-yo-vwC"/>
+                        <viewControllerLayoutGuide type="bottom" id="fvE-fm-9Ct"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="y5d-dL-cZI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Terms of Agreement/End User License Agreement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJj-T9-GXE">
+                                <rect key="frame" x="20" y="28" width="386" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="2fC-kN-fb9">
+                                <rect key="frame" x="20" y="481" width="560" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xx-LW-4Nx">
+                                        <rect key="frame" x="0.0" y="0.0" width="419" height="30"/>
+                                        <state key="normal" title="Agree"/>
+                                        <connections>
+                                            <segue destination="v4T-6v-47T" kind="show" id="LYf-nv-UKa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XdX-Wf-JKF">
+                                        <rect key="frame" x="499" y="0.0" width="61" height="30"/>
+                                        <state key="normal" title="Disagree"/>
+                                        <connections>
+                                            <segue destination="s2a-SP-8La" kind="show" id="x31-pY-MqF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sat-La-23P">
+                                <rect key="frame" x="20" y="57" width="560" height="416"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lJj-T9-GXE" firstAttribute="leading" secondItem="y5d-dL-cZI" secondAttribute="leadingMargin" id="6Af-7b-fsm"/>
+                            <constraint firstItem="fvE-fm-9Ct" firstAttribute="top" secondItem="2fC-kN-fb9" secondAttribute="bottom" constant="89" id="9D2-Nm-AZw"/>
+                            <constraint firstAttribute="trailing" secondItem="Sat-La-23P" secondAttribute="trailing" constant="16" id="Cl1-XY-R9a"/>
+                            <constraint firstItem="Sat-La-23P" firstAttribute="leading" secondItem="2fC-kN-fb9" secondAttribute="trailing" constant="-182" id="FVz-ik-hkd"/>
+                            <constraint firstItem="2fC-kN-fb9" firstAttribute="leading" secondItem="y5d-dL-cZI" secondAttribute="leading" constant="20" id="Ovf-AE-5XR"/>
+                            <constraint firstItem="Sat-La-23P" firstAttribute="width" secondItem="y5d-dL-cZI" secondAttribute="width" multiplier="0.75" constant="1" id="Rcb-mR-BOX"/>
+                            <constraint firstItem="2fC-kN-fb9" firstAttribute="leading" secondItem="y5d-dL-cZI" secondAttribute="leading" constant="20" id="UfW-gw-iiC"/>
+                            <constraint firstItem="Sat-La-23P" firstAttribute="centerX" secondItem="y5d-dL-cZI" secondAttribute="centerX" id="VgM-oq-Hk0"/>
+                            <constraint firstItem="lJj-T9-GXE" firstAttribute="top" secondItem="crR-yo-vwC" secondAttribute="bottom" constant="8" id="WEW-CL-msW"/>
+                            <constraint firstItem="Sat-La-23P" firstAttribute="leading" secondItem="y5d-dL-cZI" secondAttribute="leading" constant="16" id="ped-iZ-nPO"/>
+                            <constraint firstItem="Sat-La-23P" firstAttribute="height" secondItem="y5d-dL-cZI" secondAttribute="height" multiplier="0.7" id="rz5-Yk-MOY"/>
+                            <constraint firstItem="2fC-kN-fb9" firstAttribute="top" secondItem="Sat-La-23P" secondAttribute="bottom" constant="8" id="uso-Vu-Zre"/>
+                            <constraint firstItem="Sat-La-23P" firstAttribute="top" secondItem="lJj-T9-GXE" secondAttribute="bottom" constant="8" id="wor-br-ZSR"/>
+                            <constraint firstAttribute="trailing" secondItem="2fC-kN-fb9" secondAttribute="trailing" constant="20" id="ybr-kI-eJN"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Cl1-XY-R9a"/>
+                                <exclude reference="FVz-ik-hkd"/>
+                                <exclude reference="ped-iZ-nPO"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="eulaWebView" destination="Sat-La-23P" id="5i4-I5-ZXI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EwO-Qx-PZQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="185" y="167"/>
+        </scene>
+        <!--TopTrending-->
+        <scene sceneID="Hg5-tS-u3i">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TopTrending" id="v4T-6v-47T" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NPm-7r-WZk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="62.5" y="568"/>
+        </scene>
+        <!--TopTrending-->
+        <scene sceneID="GSF-qL-8yz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TopTrending" id="s2a-SP-8La" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qR6-xl-Maf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="315.5" y="568"/>
+        </scene>
+    </scenes>
+</document>

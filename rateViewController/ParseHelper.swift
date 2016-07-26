@@ -13,7 +13,17 @@ import Parse
 class ParseHelper {
     
    
-
+    static func queryPost(onComplete: (posts: [Post]) -> Void) {
+        let query = PFQuery(className: "Post")
+        query.whereKey("fromUser", equalTo: PFUser.currentUser()!)
+        query.findObjectsInBackgroundWithBlock{ results, error in
+            let results = results as! [Post]
+            onComplete(posts: results)
+            print(results)
+            print("results retrieved")
+        }
+        
+    }
     
     static func timelineRequestForCurrentUser(completionBlock: PFQueryArrayResultBlock) {
         let followingQuery = PFQuery(className: "Post")        
