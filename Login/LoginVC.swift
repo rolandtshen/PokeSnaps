@@ -54,16 +54,13 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         PFUser.logInWithUsernameInBackground(user.email!, password: user.password!) {
             (user: PFUser?, error: NSError?) -> Void in
             if user != nil {
-                // Do stuff after successful login.
                 
-                self.performSegueWithIdentifier("login", sender: self)
+                //self.performSegueWithIdentifier("login", sender: self)
             } else {
                 // The login failed. Check error to see why.
                 self.errorHandler()
             }
         }
-        
-        
     }
     
     
@@ -79,8 +76,6 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
                     (UIAlertAction) in
                     
                     print("ok")
-                    
-                    
                 }
             )
         )
@@ -95,13 +90,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         return false
     }
     
-    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
-    
-    
-    
-    
 }

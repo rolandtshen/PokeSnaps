@@ -53,20 +53,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let post = Post()
         if let cell = collection.dequeueReusableCellWithReuseIdentifier("PostCellIdentifier", forIndexPath: indexPath) as? PostCell {
-            ParseHelper.queryPost{ (post) in
-                self.posts = post
-                print(self.posts[indexPath.item].image)
-            }
-            let postImage = self.posts[indexPath.item].image
-            
-            
 
-            getImage(post, completionHandler: { (image) in
-                cell.imageView.image = image
-                print("\(image) + asdsadasdasdaadsd")
-            })
-            
-            return cell
 
         }
         else {
