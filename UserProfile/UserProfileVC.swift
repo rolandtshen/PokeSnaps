@@ -16,6 +16,24 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var nameLbl: UILabel!
     var posts: [Post] = []
     
+    @IBAction func logOutButton(sender: AnyObject) {
+        let alert = UIAlertController(title: "Log Out", message: "Do you want to log out?", preferredStyle: .Alert)
+        let yesAction = UIAlertAction(title: "Yes", style: .Default) { (UIAlertAction) in
+            PFUser.logOut()
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                PFUser.logOutInBackground(self.performSegueWithIdentifier("logout", sender: self))
+                
+            })
+            
+        }
+        let noAction = UIAlertAction(title: "No", style: .Default) { (UIAlertAction) in
+            print("Does not log out")
+        }
+        alert.addAction(yesAction)
+        alert.addAction(noAction)
+        presentViewController(alert, animated: true, completion: nil)
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         collection.delegate = self
@@ -51,15 +69,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let post = Post()
-        if let cell = collection.dequeueReusableCellWithReuseIdentifier("PostCellIdentifier", forIndexPath: indexPath) as? PostCell {
-
-
-        }
+        if let cell =  collection.dequeueReusableCellWithReuseIdentifier("PostCellIdentifier", forIndexPath: indexPath) as? PostCell {
+            
+            return cell }
         else {
-
-        }
         return UICollectionViewCell()
+    }
     }
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {

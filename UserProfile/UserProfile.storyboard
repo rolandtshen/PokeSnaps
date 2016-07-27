@@ -14,6 +14,14 @@
         </mutableArray>
     </customFonts>
     <scenes>
+        <!--Login-->
+        <scene sceneID="CcJ-QT-JFj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="92v-Pi-i3H" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Chb-af-ZQ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692.5" y="-757"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="Q4h-Ki-Ztk">
             <objects>
@@ -78,6 +86,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRJ-92-eMe">
                                         <rect key="frame" x="527" y="7" width="48" height="30"/>
                                         <state key="normal" title="Logout"/>
+                                        <connections>
+                                            <action selector="logOutButton:" destination="plt-fP-lmo" eventType="touchUpInside" id="Zyc-Ip-wi0"/>
+                                            <segue destination="92v-Pi-i3H" kind="show" identifier="logout" id="XJD-Ku-YQN"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.84417067307692295" green="0.84417067307692295" blue="0.84417067307692295" alpha="1" colorSpace="calibratedRGB"/>
@@ -134,7 +146,7 @@
                                                         <segue destination="Xg0-5g-KQp" kind="show" id="YlA-lz-yM7"/>
                                                     </connections>
                                                 </button>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w2T-fm-UbH" customClass="PFImageView">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w2T-fm-UbH">
                                                     <rect key="frame" x="0.0" y="0.0" width="121" height="105"/>
                                                     <accessibility key="accessibilityConfiguration" identifier="PostCellIdentifier"/>
                                                     <constraints>
