@@ -34,23 +34,19 @@ extension CameraFuncViewController: UITabBarControllerDelegate {
     func takePhoto() {
         // instantiate photo taking class, provide callback for when photo is selected
         photoTakingHelper = PhotoTakingHelper(viewController: self.tabBarController!) { (image: UIImage?) in
-            
-            
-
-                if let image = image {
-                    print("received callback")
-
-                    let imageData = UIImageJPEGRepresentation(image, 0.8)!
-                    let imageFile = PFFile(name: "image.jpg", data: imageData)!
-                    
-                    let post = PFObject(className: "Post")
-                    post["imageFile"] = imageFile
-                 
-                    print("done")
-                    post.saveInBackground()
-                }
-            
-
+            if let image = image {
+                print("received callback")
+                
+                let imageData = UIImageJPEGRepresentation(image, 0.8)!
+                let imageFile = PFFile(name: "image.jpg", data: imageData)!
+                
+                let post = Post()
+                post.imageFile = imageFile
+                post.fromUser = PFUser.currentUser()
+                post.likes = 0
+                
+                post.saveInBackground()
+            }
+        }
     }
-}
 }

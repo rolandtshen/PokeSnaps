@@ -116,6 +116,9 @@
                                 <segment title="Trending"/>
                             </segments>
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="segmentedControlChanged:" destination="RVs-W6-MNs" eventType="valueChanged" id="En1-bR-ouv"/>
+                            </connections>
                         </segmentedControl>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

@@ -44,8 +44,9 @@ class TopTrendingViewController: PFQueryTableViewController {
             query.includeKey("user")
         }
         //trending posts
-        else {
-            query.whereKey("createdAt", greaterThan: NSCalendar.currentCalendar().isDateInYesterday(NSDate()))
+        else if(segmentedControl.selectedSegmentIndex == 1){
+            let date = NSDate(timeIntervalSinceNow: -86400)
+            query.whereKey("createdAt", greaterThan: date)
             query.orderByDescending("likes")
         }
         query.includeKey("fromUser")
@@ -68,5 +69,10 @@ class TopTrendingViewController: PFQueryTableViewController {
         
     }
 
+    @IBAction func segmentedControlChanged(sender: AnyObject) {
+        tableView.reloadData()
+        self.loadObjects()
+        self.queryForTable()
+    }
 }
     
