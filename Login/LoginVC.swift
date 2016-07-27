@@ -30,10 +30,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
             print("Logged in user already")
             print(PFUser.currentUser()?.username)
             
-            dispatch_async(dispatch_get_main_queue()) {
-                [unowned self] in
-                self.performSegueWithIdentifier("login", sender: self)
-            }
+            self.performSegueWithIdentifier("login", sender: self)
             
         }else{
             print("No user logged in")
@@ -50,16 +47,19 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         let user = PFUser()
         user.password = passwordTextField.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         user.email = emailTextField.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        
         // other fields can be set just like with PFObject
         PFUser.logInWithUsernameInBackground(user.email!, password: user.password!) {
             (user: PFUser?, error: NSError?) -> Void in
-            if user != nil {
-                
-                //self.performSegueWithIdentifier("login", sender: self)
-            } else {
-                // The login failed. Check error to see why.
-                self.errorHandler()
-            }
+            
+            guard error == nil else { self.errorHandler(); return }
+            guard user != nil else { self.errorHandler(); return }
+            
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let mainTabBarController = mainStoryboard.instantiateViewControllerWithIdentifier("MainTabBarController")
+            
+            self.view.window?.rootViewController = mainTabBarController
+            self.dismissViewControllerAnimated(true, completion: nil)
         }
     }
     

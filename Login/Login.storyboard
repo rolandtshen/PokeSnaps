@@ -11,14 +11,6 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Main-->
-        <scene sceneID="N5s-IH-Ift">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="wv4-18-ZWr" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="anV-90-EaF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="628.5" y="236"/>
-        </scene>
         <!--SignUpVC-->
         <scene sceneID="XFX-Pl-Y6j">
             <objects>

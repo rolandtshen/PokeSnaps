@@ -26,7 +26,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="c8h-cc-Rq3">
             <objects>
-                <tabBarController storyboardIdentifier="tabbar" id="9bx-Np-qrL" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9bx-Np-qrL" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Hc9-5b-FlX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
