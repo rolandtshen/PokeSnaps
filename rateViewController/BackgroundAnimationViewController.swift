@@ -22,12 +22,13 @@ class BackgroundAnimationViewController: UIViewController {
     
     @IBOutlet weak var kolodaView: CustomKolodaView!
     
-    var image: UIImage!
+    var images = [UIImage]()
     var posts: [Post] = []
     
     var a: Int = 0
 
-    
+    var index: Int = -1
+
     
     //MARK: Lifecycle
     override func viewDidLoad() {
@@ -41,6 +42,23 @@ class BackgroundAnimationViewController: UIViewController {
 
 
         self.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        
+        ParseHelper.timelineRequestForCurrentUser { (result: [PFObject]?, error: NSError?) -> Void in
+            self.posts = result as? [Post] ?? []
+            for a in 0...5 {
+            self.posts[a].downloadImage { image in
+                self.images.append(image!)
+                if (a == 5) {
+                    self.kolodaView.reloadData()
+                }
+                
+                }
+            }
+
+        }
+    
+        
+
     }
     
     //MARK: IBActions
@@ -65,7 +83,7 @@ extension BackgroundAnimationViewController: KolodaViewDelegate {
     }
     
     func koloda(koloda: KolodaView, didSelectCardAtIndex index: UInt) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "http://yalantis.com/")!)
+        UIApplication.sharedApplication().openURL(NSURL(string: "http://pokesnap.weebly.com/")!)
     }
     
     func kolodaShouldApplyAppearAnimation(koloda: KolodaView) -> Bool {
@@ -97,24 +115,22 @@ extension BackgroundAnimationViewController: KolodaViewDataSource {
     @NSManaged var imageFile: PFFile?
     
     func kolodaNumberOfCards(koloda: KolodaView) -> UInt {
-        return 20
+        return UInt(images.count)
     }
+    
     
     func koloda(koloda: KolodaView, viewForCardAtIndex index: UInt) -> UIView {
         
-        ParseHelper.timelineRequestForCurrentUser { (result: [PFObject]?, error: NSError?) -> Void in
-            self.posts = result as? [Post] ?? []
-            self.posts[self.a].downloadImage { image in
-                self.image = image
-                self.a = self.a + 1
-
-                koloda.reloadData()
-            }
+        self.index = self.index + 1
+    
+        
+        if (images.count > 0) {
+            print(self.index)
+            return UIImageView(image: images[Int(self.index)])
+            
         }
         
-        
-        return UIImageView(image: image)
-        
+        return UIImageView(image: UIImage(named: "Pokesnaps" ))
     }
     
     func koloda(koloda: KolodaView, viewForCardOverlayAtIndex index: UInt) -> OverlayView? {
