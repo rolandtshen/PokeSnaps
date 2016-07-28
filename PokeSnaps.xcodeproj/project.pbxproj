@@ -26,8 +26,6 @@
 		09E8B3B51D46C68600401A8E /* CustomKoladaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E8B3AC1D46C68600401A8E /* CustomKoladaView.swift */; };
 		09E8B3B61D46C68600401A8E /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E8B3AD1D46C68600401A8E /* CustomOverlayView.swift */; };
 		09E8B3B71D46C68600401A8E /* CustomOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09E8B3AE1D46C68600401A8E /* CustomOverlayView.xib */; };
-		09E8B3B81D46C68600401A8E /* ExampleOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E8B3AF1D46C68600401A8E /* ExampleOverlayView.swift */; };
-		09E8B3B91D46C68600401A8E /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09E8B3B01D46C68600401A8E /* OverlayView.xib */; };
 		09E8B3BA1D46C68600401A8E /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E8B3B11D46C68600401A8E /* ParseHelper.swift */; };
 		09E8B3BB1D46C68600401A8E /* RateViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E8B3B21D46C68600401A8E /* RateViewController.storyboard */; };
 		2A163EF51D402F6F00FC8FE1 /* TopTrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A163EF41D402F6F00FC8FE1 /* TopTrendingViewController.swift */; };
@@ -62,8 +60,6 @@
 		09E8B3AC1D46C68600401A8E /* CustomKoladaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomKoladaView.swift; sourceTree = "<group>"; };
 		09E8B3AD1D46C68600401A8E /* CustomOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
 		09E8B3AE1D46C68600401A8E /* CustomOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOverlayView.xib; sourceTree = "<group>"; };
-		09E8B3AF1D46C68600401A8E /* ExampleOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleOverlayView.swift; sourceTree = "<group>"; };
-		09E8B3B01D46C68600401A8E /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
 		09E8B3B11D46C68600401A8E /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
 		09E8B3B21D46C68600401A8E /* RateViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RateViewController.storyboard; sourceTree = "<group>"; };
 		0CC5464C957ABD16978127A4 /* Pods_PokeSnaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeSnaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,8 +153,6 @@
 				09E8B3AC1D46C68600401A8E /* CustomKoladaView.swift */,
 				09E8B3AD1D46C68600401A8E /* CustomOverlayView.swift */,
 				09E8B3AE1D46C68600401A8E /* CustomOverlayView.xib */,
-				09E8B3AF1D46C68600401A8E /* ExampleOverlayView.swift */,
-				09E8B3B01D46C68600401A8E /* OverlayView.xib */,
 				09E8B3B11D46C68600401A8E /* ParseHelper.swift */,
 				09E8B3B21D46C68600401A8E /* RateViewController.storyboard */,
 			);
@@ -302,7 +296,6 @@
 				2AD3F3C61D4008BB000626E5 /* Assets.xcassets in Resources */,
 				2AD3F3C41D4008BB000626E5 /* Main.storyboard in Resources */,
 				096E95781D43E56000CDCF22 /* PokemonFont.ttf in Resources */,
-				09E8B3B91D46C68600401A8E /* OverlayView.xib in Resources */,
 				09D364DB1D47DB1A00898C95 /* TOSEULA.storyboard in Resources */,
 				09D364D51D47DA5F00898C95 /* SignUpVC.storyboard in Resources */,
 				2A163EF71D402F7E00FC8FE1 /* TopTrending.storyboard in Resources */,
@@ -376,7 +369,6 @@
 				2A163EF51D402F6F00FC8FE1 /* TopTrendingViewController.swift in Sources */,
 				09E8B3B61D46C68600401A8E /* CustomOverlayView.swift in Sources */,
 				09D364D11D47DA3E00898C95 /* LoginVC.swift in Sources */,
-				09E8B3B81D46C68600401A8E /* ExampleOverlayView.swift in Sources */,
 				2A163EFD1D413C9400FC8FE1 /* Post.swift in Sources */,
 				096E95721D42DD7400CDCF22 /* PostCell.swift in Sources */,
 				09E8B3BA1D46C68600401A8E /* ParseHelper.swift in Sources */,

@@ -19,7 +19,7 @@ class CustomOverlayView: OverlayView {
         
         var imageView = UIImageView(frame: self.bounds)
         self.addSubview(imageView)
-        
+        print("Was here")
         return imageView
         }()
     
@@ -27,10 +27,14 @@ class CustomOverlayView: OverlayView {
         didSet {
             switch overlayState {
             case .Left? :
+                print("Was here")
                 overlayImageView.image = UIImage(named: overlayLeftImageName)
             case .Right? :
+                print("Was here")
                 overlayImageView.image = UIImage(named: overlayRightImageName)
             default:
+                print("Was here")
+
                 overlayImageView.image = nil
             }
             
