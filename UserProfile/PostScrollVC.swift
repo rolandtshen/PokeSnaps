@@ -48,8 +48,5 @@ class PostScroll: UIViewController, UIScrollViewDelegate {
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
         return self.imageView
     }
-
-    
-
 }
 

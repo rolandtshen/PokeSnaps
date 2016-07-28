@@ -31,6 +31,4 @@ class PostCell: UICollectionViewCell {
         self.post = post
     
     }
-    
-
 }

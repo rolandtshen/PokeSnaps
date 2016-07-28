@@ -58,5 +58,10 @@ class Post: PFObject, PFSubclassing {
         }
     }
     
-    
+    func flag(post: Post) {
+        let flagged = Flagged()
+        flagged.fromUser = PFUser.currentUser()
+        flagged.reportedPost = post
+        flagged.saveInBackground()
+    }
 }

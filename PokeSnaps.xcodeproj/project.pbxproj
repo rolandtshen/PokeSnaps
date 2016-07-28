@@ -34,6 +34,7 @@
 		2A163EF71D402F7E00FC8FE1 /* TopTrending.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A163EF61D402F7E00FC8FE1 /* TopTrending.storyboard */; };
 		2A163EF91D40422400FC8FE1 /* TopTrendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A163EF81D40422400FC8FE1 /* TopTrendingCell.swift */; };
 		2A163EFD1D413C9400FC8FE1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A163EFC1D413C9400FC8FE1 /* Post.swift */; };
+		2AA002421D494C1E00B1A9C4 /* Flagged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA002411D494C1E00B1A9C4 /* Flagged.swift */; };
 		2AD3F3BF1D4008BB000626E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD3F3BE1D4008BB000626E5 /* AppDelegate.swift */; };
 		2AD3F3C41D4008BB000626E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD3F3C21D4008BB000626E5 /* Main.storyboard */; };
 		2AD3F3C61D4008BB000626E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD3F3C51D4008BB000626E5 /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 		2A163EF61D402F7E00FC8FE1 /* TopTrending.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TopTrending.storyboard; sourceTree = "<group>"; };
 		2A163EF81D40422400FC8FE1 /* TopTrendingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopTrendingCell.swift; sourceTree = "<group>"; };
 		2A163EFC1D413C9400FC8FE1 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		2AA002411D494C1E00B1A9C4 /* Flagged.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flagged.swift; sourceTree = "<group>"; };
 		2AD3F3BB1D4008BB000626E5 /* PokeSnaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeSnaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AD3F3BE1D4008BB000626E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AD3F3C31D4008BB000626E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 		2A163EF31D402F4A00FC8FE1 /* TopTrending */ = {
 			isa = PBXGroup;
 			children = (
+				2AA002411D494C1E00B1A9C4 /* Flagged.swift */,
 				2A163EF41D402F6F00FC8FE1 /* TopTrendingViewController.swift */,
 				2A163EF61D402F7E00FC8FE1 /* TopTrending.storyboard */,
 				2A163EF81D40422400FC8FE1 /* TopTrendingCell.swift */,
@@ -370,6 +373,7 @@
 				096E95731D42DD7400CDCF22 /* PostScrollVC.swift in Sources */,
 				09E8B3B31D46C68600401A8E /* BackgroundAnimationViewController.swift in Sources */,
 				2A163EF91D40422400FC8FE1 /* TopTrendingCell.swift in Sources */,
+				2AA002421D494C1E00B1A9C4 /* Flagged.swift in Sources */,
 				09E85AD71D46D9B3009603BE /* CameraFuncViewController.swift in Sources */,
 				09E85AD81D46D9B3009603BE /* PhotoTakingHelper.swift in Sources */,
 				2AD3F3BF1D4008BB000626E5 /* AppDelegate.swift in Sources */,
