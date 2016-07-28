@@ -1,18 +1,18 @@
 //
-//  CustomOverlayView.swift
-//  Koloda
+//  ExampleOverlayView.swift
+//  KolodaView
 //
-//  Created by Eugene Andreyev on 7/27/15.
+//  Created by Eugene Andreyev on 6/21/15.
 //  Copyright (c) 2015 CocoaPods. All rights reserved.
 //
 
 import UIKit
 import Koloda
 
-private let overlayRightImageName = "overlay_like"
-private let overlayLeftImageName = "overlay_skip"
+private let overlayRightImageName = "yesOverlayImage"
+private let overlayLeftImageName = "noOverlayImage"
 
-class CustomOverlayView: OverlayView {
+class ExampleOverlayView: OverlayView {
     
     @IBOutlet lazy var overlayImageView: UIImageView! = {
         [unowned self] in
@@ -23,7 +23,7 @@ class CustomOverlayView: OverlayView {
         return imageView
         }()
     
-    override var overlayState: SwipeResultDirection?  {
+    override var overlayState: SwipeResultDirection? {
         didSet {
             switch overlayState {
             case .Left? :
@@ -33,7 +33,6 @@ class CustomOverlayView: OverlayView {
             default:
                 overlayImageView.image = nil
             }
-            
         }
     }
     

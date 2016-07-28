@@ -29,8 +29,6 @@ class BackgroundAnimationViewController: UIViewController {
 
     var index: Int = -1
 
-    @IBOutlet weak var leftButton: UIButton!
-    @IBOutlet weak var rightButton: UIButton!
     
     //MARK: Lifecycle
     override func viewDidLoad() {
@@ -47,7 +45,7 @@ class BackgroundAnimationViewController: UIViewController {
         
         ParseHelper.timelineRequestForCurrentUser { (result: [PFObject]?, error: NSError?) -> Void in
             self.posts = result as? [Post] ?? []
-            for a in 0...(self.posts.count - 1) {
+            for a in 0...5 {
             self.posts[a].downloadImage { image in
                 self.images.append(image!)
                 if (a == 5) {
@@ -62,29 +60,14 @@ class BackgroundAnimationViewController: UIViewController {
         
 
     }
-    @IBAction func leftButtonTapped(sender: AnyObject) {
+    
+    //MARK: IBActions
+    @IBAction func leftButtonTapped() {
         kolodaView?.swipe(SwipeResultDirection.Left)
-        ParseHelper.timelineRequestForCurrentUser { (result: [PFObject]?, error: NSError?) -> Void in
-            self.posts = result as? [Post] ?? []
-            let likes = Int(self.posts[self.index].likes!) - 1
-            
-            self.posts[self.index].likes = likes
-            let post = self.posts[self.index]
-            post.saveInBackground()
-        }
     }
-    @IBAction func rightButtonTapped(sender: AnyObject) {
-        ParseHelper.timelineRequestForCurrentUser { (result: [PFObject]?, error: NSError?) -> Void in
-            self.posts = result as? [Post] ?? []
-            let likes = Int(self.posts[self.index].likes!) + 1
-            
-            self.posts[self.index].likes = likes
-            let post = self.posts[self.index]
-            post.saveInBackground()
-        }
+    
+    @IBAction func rightButtonTapped() {
         kolodaView?.swipe(SwipeResultDirection.Right)
-        
-
     }
     
     @IBAction func undoButtonTapped() {
@@ -143,11 +126,6 @@ extension BackgroundAnimationViewController: KolodaViewDataSource {
         
         if (images.count > 0) {
             print(self.index)
-            
-            if (self.index > posts.count - 1) {
-                kolodaDidResetCard(kolodaView)
-                self.index = 0
-            }
             return UIImageView(image: images[Int(self.index)])
             
         }
@@ -160,30 +138,5 @@ extension BackgroundAnimationViewController: KolodaViewDataSource {
         
         return NSBundle.mainBundle().loadNibNamed("CustomOverlayView",
                                                   owner: self, options: nil)[0] as? OverlayView
-    }
-    func koloda(koloda: KolodaView, didSwipeCardAtIndex index: UInt, inDirection direction: SwipeResultDirection) {
-      print(direction.rawValue)
-        if direction.rawValue == ("Right") {
-            ParseHelper.timelineRequestForCurrentUser { (result: [PFObject]?, error: NSError?) -> Void in
-                self.posts = result as? [Post] ?? []
-                let likes = Int(self.posts[self.index].likes!) - 1
-                
-                self.posts[self.index].likes = likes
-                let post = self.posts[self.index]
-                post.saveInBackground()
-            }
-
-        }
-        
-        if (direction.rawValue == ("Left")) {
-            ParseHelper.timelineRequestForCurrentUser { (result: [PFObject]?, error: NSError?) -> Void in
-                self.posts = result as? [Post] ?? []
-                let likes = Int(self.posts[self.index].likes!) + 1
-                
-                self.posts[self.index].likes = likes
-                let post = self.posts[self.index]
-                post.saveInBackground()
-            }
-        }
     }
 }
