@@ -101,5 +101,4 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    
 }

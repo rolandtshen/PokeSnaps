@@ -10,14 +10,14 @@ import UIKit
 
 class TermsAndConditions: UIViewController {
     
-    
-    @IBOutlet weak var eulaWebView: UIWebView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let url = NSURL (string: "pokesnap.weebly.com/terms-and-conditions.html");
-        let requestObj = NSURLRequest(URL: url!);
-        eulaWebView.loadRequest(requestObj);
-    }
+//    
+//    @IBOutlet weak var eulaWebView: UIWebView!
+//    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        
+//        let url = NSURL (string: "pokesnap.weebly.com/terms-and-conditions.html");
+//        let requestObj = NSURLRequest(URL: url!);
+//        eulaWebView.loadRequest(requestObj);
+//    }
 }

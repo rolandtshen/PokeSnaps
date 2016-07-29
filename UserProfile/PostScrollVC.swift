@@ -7,16 +7,20 @@
 //
 
 import UIKit
+import Parse
 
 class PostScroll: UIViewController, UIScrollViewDelegate {
-
+    
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var imageView:UIImageView!
-
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    var image: UIImage?
+    
+    
     @IBAction func backButton(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-
+    
     
     @IBAction func moreAlertController(sender: AnyObject) {
         let alertController = UIAlertController()
@@ -25,11 +29,11 @@ class PostScroll: UIViewController, UIScrollViewDelegate {
             
         }
         
-    
+        
         let cancel = UIAlertAction(title: "Cancel", style: .Default, handler: { (action) -> Void in
             print("Ok Button Pressed")
         })
-
+        
         alertController.addAction(delete)
         alertController.addAction(cancel)
         
@@ -39,17 +43,20 @@ class PostScroll: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        imageView.image = image
+        print("completed")
+        
         self.scrollView.minimumZoomScale = 1.0
         self.scrollView.maximumZoomScale = 6.0
+        nameLabel.text = PFUser.currentUser()?.username
     }
     
     
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
         return self.imageView
     }
-
     
-
 }
+
 

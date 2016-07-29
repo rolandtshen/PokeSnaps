@@ -19,7 +19,7 @@ class Post: PFObject, PFSubclassing {
     
     @NSManaged var fromUser: PFUser?
     @NSManaged var imageFile: PFFile?
-    @NSManaged var likes: NSNumber?
+    @NSManaged var likes: NSNumber!
     
     static func parseClassName() -> String {
         return "Post"

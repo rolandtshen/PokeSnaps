@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		096E95721D42DD7400CDCF22 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096E956D1D42DD7400CDCF22 /* PostCell.swift */; };
 		096E95731D42DD7400CDCF22 /* PostScrollVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096E956E1D42DD7400CDCF22 /* PostScrollVC.swift */; };
-		096E95741D42DD7400CDCF22 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 096E956F1D42DD7400CDCF22 /* UserProfile.storyboard */; };
 		096E95751D42DD7400CDCF22 /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096E95701D42DD7400CDCF22 /* UserProfileVC.swift */; };
 		096E95781D43E56000CDCF22 /* PokemonFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 096E95771D43E56000CDCF22 /* PokemonFont.ttf */; };
 		09D364D11D47DA3E00898C95 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D364D01D47DA3E00898C95 /* LoginVC.swift */; };
@@ -37,12 +36,12 @@
 		2AD3F3C61D4008BB000626E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD3F3C51D4008BB000626E5 /* Assets.xcassets */; };
 		2AD3F3C91D4008BB000626E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD3F3C71D4008BB000626E5 /* LaunchScreen.storyboard */; };
 		3108559CE57098FFFC417D6F /* Pods_PokeSnaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC5464C957ABD16978127A4 /* Pods_PokeSnaps.framework */; };
+		E593918D1D4ACF54005B3ABB /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E593918C1D4ACF54005B3ABB /* UserProfile.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		096E956D1D42DD7400CDCF22 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		096E956E1D42DD7400CDCF22 /* PostScrollVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostScrollVC.swift; sourceTree = "<group>"; };
-		096E956F1D42DD7400CDCF22 /* UserProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
 		096E95701D42DD7400CDCF22 /* UserProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 		096E95771D43E56000CDCF22 /* PokemonFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PokemonFont.ttf; sourceTree = "<group>"; };
 		09D364D01D47DA3E00898C95 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -75,6 +74,7 @@
 		2AD3F3CA1D4008BB000626E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		772A33EC81728D692630120D /* Pods-PokeSnaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeSnaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeSnaps/Pods-PokeSnaps.debug.xcconfig"; sourceTree = "<group>"; };
 		BFD1CC1A2B905199A93F3A8A /* Pods-PokeSnaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeSnaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeSnaps/Pods-PokeSnaps.release.xcconfig"; sourceTree = "<group>"; };
+		E593918C1D4ACF54005B3ABB /* UserProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +94,8 @@
 			children = (
 				096E956D1D42DD7400CDCF22 /* PostCell.swift */,
 				096E956E1D42DD7400CDCF22 /* PostScrollVC.swift */,
-				096E956F1D42DD7400CDCF22 /* UserProfile.storyboard */,
 				096E95701D42DD7400CDCF22 /* UserProfileVC.swift */,
+				E593918C1D4ACF54005B3ABB /* UserProfile.storyboard */,
 			);
 			path = UserProfile;
 			sourceTree = "<group>";
@@ -261,7 +261,7 @@
 				TargetAttributes = {
 					2AD3F3BA1D4008BB000626E5 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = CM3UL49RH2;
+						DevelopmentTeam = 37UFE54W7P;
 					};
 				};
 			};
@@ -297,9 +297,9 @@
 				2AD3F3C41D4008BB000626E5 /* Main.storyboard in Resources */,
 				096E95781D43E56000CDCF22 /* PokemonFont.ttf in Resources */,
 				09D364DB1D47DB1A00898C95 /* TOSEULA.storyboard in Resources */,
+				E593918D1D4ACF54005B3ABB /* UserProfile.storyboard in Resources */,
 				09D364D51D47DA5F00898C95 /* SignUpVC.storyboard in Resources */,
 				2A163EF71D402F7E00FC8FE1 /* TopTrending.storyboard in Resources */,
-				096E95741D42DD7400CDCF22 /* UserProfile.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +492,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PokeSnaps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pokesnaps.PokeSnaps;
+				PRODUCT_BUNDLE_IDENTIFIER = PokeSnaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -507,7 +507,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PokeSnaps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pokesnaps.PokeSnaps;
+				PRODUCT_BUNDLE_IDENTIFIER = PokeSnaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";

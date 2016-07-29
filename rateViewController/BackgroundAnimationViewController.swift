@@ -163,7 +163,7 @@ extension BackgroundAnimationViewController: KolodaViewDataSource {
     }
     func koloda(koloda: KolodaView, didSwipeCardAtIndex index: UInt, inDirection direction: SwipeResultDirection) {
       print(direction.rawValue)
-        if direction.rawValue == ("Right") {
+        if direction.rawValue == ("Left") {
             ParseHelper.timelineRequestForCurrentUser { (result: [PFObject]?, error: NSError?) -> Void in
                 self.posts = result as? [Post] ?? []
                 let likes = Int(self.posts[self.index].likes!) - 1
@@ -175,7 +175,7 @@ extension BackgroundAnimationViewController: KolodaViewDataSource {
 
         }
         
-        if (direction.rawValue == ("Left")) {
+        if (direction.rawValue == ("Right")) {
             ParseHelper.timelineRequestForCurrentUser { (result: [PFObject]?, error: NSError?) -> Void in
                 self.posts = result as? [Post] ?? []
                 let likes = Int(self.posts[self.index].likes!) + 1

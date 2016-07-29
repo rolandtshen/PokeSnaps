@@ -10,11 +10,14 @@ import UIKit
 import Parse
 import ParseUI
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ViewController: UIViewController {
     
     @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var nameLbl: UILabel!
     var posts: [Post] = []
+    var image: UIImage?
+    var image1: UIImage?
+    
     
     @IBAction func logOutButton(sender: AnyObject) {
         let alert = UIAlertController(title: "Log Out", message: "Do you want to log out?", preferredStyle: .Alert)
@@ -26,6 +29,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             })
             
         }
+        
         let noAction = UIAlertAction(title: "No", style: .Default) { (UIAlertAction) in
             print("Does not log out")
         }
@@ -33,57 +37,70 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         alert.addAction(noAction)
         presentViewController(alert, animated: true, completion: nil)
     }
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         collection.delegate = self
         collection.dataSource = self
+        
         nameLbl.text = PFUser.currentUser()?.username
-        collection.reloadData()
         
-    }
-    
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        if (segue.identifier == "test") {
-            
-            let destViewController = segue.destinationViewController as! PostScroll
-            
-            destViewController.imageView.image = UIImage()
+        ParseHelper.postQuery { posts in
+            self.posts = posts
+            self.collection.reloadData()
         }
     }
     
-    
-    
-    func getImage(object: PFObject, completionHandler: (UIImage) -> Void) {
-        let image = object as! Post
-        if let picture = image.imageFile {
-            picture.getDataInBackgroundWithBlock({
-                (imageData: NSData?, error: NSError?) -> Void in
-                if (error == nil) {
-                    completionHandler(UIImage(data: imageData!)!)
-                }
-            })
-        }
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        print(segue.identifier)
+//        
+//        if segue.identifier == "test" {
+//            let destViewController = segue.destinationViewController as! PostScroll
+//            
+//            let selectedIndicies = collection.indexPathsForSelectedItems()!
+//            print(selectedIndicies)
+//            let indexPath : NSIndexPath = selectedIndicies[0] as NSIndexPath
+//            let cell = self.collection.cellForItemAtIndexPath(indexPath)
+//            
+//            
+////            destViewController.imageView.image =  posts[0].image.value
+//        }
+//    }
+}
+
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        if let cell =  collection.dequeueReusableCellWithReuseIdentifier("PostCellIdentifier", forIndexPath: indexPath) as? PostCell {
-            
-            return cell }
-        else {
-        return UICollectionViewCell()
-    }
-    }
-
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PostCellIdentifier", forIndexPath: indexPath) as? PostCell
+        //sets the post to be used as the object in the post array with the index of indexPath.item
         
+        if posts.count > 0 {
+            let post = posts[indexPath.item]
+            //sets the image of the cell to be the image of the post's image
+            //I don't have the post class so just set 'imageFile' to be what ever the image property is called in the post class
+            
+            post.downloadImage { image in
+                guard let image = image else { print("NO IMAGE"); return }
+                cell?.imageView.image = image
+                self.image1 = cell?.imageView.image
+            }
+        cell!.likes.text = ("\(post.likes)")
+            
+        }
+        return cell!
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        // print("cell tapped \(indexPath.row)")
+        let cell = collectionView.cellForItemAtIndexPath(indexPath) as! PostCell
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
-        
+        return 3
+        // return posts.count > 0 ? posts.count / collectionView.numberOfSections() : 0
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -91,7 +108,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake(105, 105)
+        return CGSizeMake(105, 125)
     }
-
 }
