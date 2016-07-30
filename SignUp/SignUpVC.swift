@@ -60,12 +60,45 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 } else {
                     // Hooray! Let them use the app now.
                     print("signup success")
-                    self.performSegueWithIdentifier("signUp", sender: self)
+//                    let signUpStoryboard: UIStoryboard = UIStoryboard(name: "signup", bundle: nil)
+//                    
+//                    let nextStoryboard = signUpStoryboard.instantiateViewControllerWithIdentifier("signup")
+//                    self.presentViewController(signUpStoryboard, animated: true, completion: nil)
+//                    
+//                    
+//                    
+                    
+                    self.signUpSuccessful()
+                    
                 }
             }
         }
         
     }
+    
+    func signUpSuccessful() {
+        
+        let alert = UIAlertController(title: "Sign Up Successful!", message: "Please login to your account", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(
+            
+            UIAlertAction(
+                
+                title: "Ok", style: UIAlertActionStyle.Default, handler:{
+                    
+                    (UIAlertAction) in
+                    
+                    print("Ok")
+                    
+                    
+                }
+            )
+        )
+        
+        self.presentViewController(alert, animated: true, completion: {
+        })
+    }
+    
+
     
     func errorHandler() {
         

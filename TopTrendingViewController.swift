@@ -66,7 +66,7 @@ class TopTrendingViewController: PFQueryTableViewController {
     }
     
     @IBAction func flagPressed(sender: AnyObject) {
-        
+         showFlagActionSheetForPost()
     }
 
     @IBAction func segmentedControlChanged(sender: AnyObject) {
@@ -74,5 +74,22 @@ class TopTrendingViewController: PFQueryTableViewController {
         self.loadObjects()
         self.queryForTable()
     }
+    
+    func showFlagActionSheetForPost() {
+        let alertController = UIAlertController(title: nil, message: "Do you want to report this post?", preferredStyle: .ActionSheet)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        let destroyAction = UIAlertAction(title: "Report", style: .Destructive) { (action) in
+            let post = Post()
+            post.flag(post)
+        }
+        
+        alertController.addAction(destroyAction)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+
 }
     

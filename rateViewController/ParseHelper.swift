@@ -28,9 +28,9 @@ class ParseHelper {
         followingQuery.findObjectsInBackgroundWithBlock(completionBlock)
     }
     
-    static func postQuery(onComplete: (posts: [Post]) -> Void) {
+    static func postQuery(onComplete: (posts: [Post]) -> Void) { //getPostQuery
         
-        var query = PFQuery(className:"Post")
+        let query = PFQuery(className:"Post")
         query.whereKey("fromUser", equalTo: PFUser.currentUser()!)
         query.findObjectsInBackgroundWithBlock {results, error in
             let results = results as? [Post]

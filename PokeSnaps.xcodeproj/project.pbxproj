@@ -27,6 +27,7 @@
 		09E8B3B71D46C68600401A8E /* CustomOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09E8B3AE1D46C68600401A8E /* CustomOverlayView.xib */; };
 		09E8B3BA1D46C68600401A8E /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E8B3B11D46C68600401A8E /* ParseHelper.swift */; };
 		09E8B3BB1D46C68600401A8E /* RateViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E8B3B21D46C68600401A8E /* RateViewController.storyboard */; };
+		09EFA78A1D4C1DCE00A378A3 /* Flagged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EFA7891D4C1DCE00A378A3 /* Flagged.swift */; };
 		2A163EF51D402F6F00FC8FE1 /* TopTrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A163EF41D402F6F00FC8FE1 /* TopTrendingViewController.swift */; };
 		2A163EF71D402F7E00FC8FE1 /* TopTrending.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A163EF61D402F7E00FC8FE1 /* TopTrending.storyboard */; };
 		2A163EF91D40422400FC8FE1 /* TopTrendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A163EF81D40422400FC8FE1 /* TopTrendingCell.swift */; };
@@ -61,6 +62,7 @@
 		09E8B3AE1D46C68600401A8E /* CustomOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOverlayView.xib; sourceTree = "<group>"; };
 		09E8B3B11D46C68600401A8E /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
 		09E8B3B21D46C68600401A8E /* RateViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RateViewController.storyboard; sourceTree = "<group>"; };
+		09EFA7891D4C1DCE00A378A3 /* Flagged.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flagged.swift; sourceTree = "<group>"; };
 		0CC5464C957ABD16978127A4 /* Pods_PokeSnaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeSnaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A163EF41D402F6F00FC8FE1 /* TopTrendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopTrendingViewController.swift; sourceTree = "<group>"; };
 		2A163EF61D402F7E00FC8FE1 /* TopTrending.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TopTrending.storyboard; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				2A163EF61D402F7E00FC8FE1 /* TopTrending.storyboard */,
 				2A163EF81D40422400FC8FE1 /* TopTrendingCell.swift */,
 				2A163EFC1D413C9400FC8FE1 /* Post.swift */,
+				09EFA7891D4C1DCE00A378A3 /* Flagged.swift */,
 			);
 			name = TopTrending;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 			files = (
 				09E8B3B41D46C68600401A8E /* BackgroundKolodaAnimator.swift in Sources */,
 				09E8B3B51D46C68600401A8E /* CustomKoladaView.swift in Sources */,
+				09EFA78A1D4C1DCE00A378A3 /* Flagged.swift in Sources */,
 				096E95731D42DD7400CDCF22 /* PostScrollVC.swift in Sources */,
 				09E8B3B31D46C68600401A8E /* BackgroundAnimationViewController.swift in Sources */,
 				2A163EF91D40422400FC8FE1 /* TopTrendingCell.swift in Sources */,

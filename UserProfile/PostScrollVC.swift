@@ -16,7 +16,6 @@ class PostScroll: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var nameLabel: UILabel!
     var image: UIImage?
     
-    
     @IBAction func backButton(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
@@ -50,6 +49,8 @@ class PostScroll: UIViewController, UIScrollViewDelegate {
         self.scrollView.minimumZoomScale = 1.0
         self.scrollView.maximumZoomScale = 6.0
         nameLabel.text = PFUser.currentUser()?.username
+
+        
     }
     
     

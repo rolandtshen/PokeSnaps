@@ -43,7 +43,7 @@ class Post: PFObject, PFSubclassing {
     func downloadImage(onComplete: UIImage? -> Void) {
         if (image.value == nil) {
             imageFile?.getDataInBackgroundWithBlock { (data: NSData?, error: NSError?) -> Void in
-                if let error = error {
+                if error != nil {
                     onComplete(nil)
                 }
                 
@@ -56,7 +56,13 @@ class Post: PFObject, PFSubclassing {
         } else {
             onComplete(nil)
         }
+        
     }
     
-    
+    func flag(post: Post) {
+        let flagged = Flagged()
+        flagged.fromUser = PFUser.currentUser()
+        flagged.reportedPost = post
+        flagged.saveInBackground()
+    }
 }

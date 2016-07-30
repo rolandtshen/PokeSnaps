@@ -12,8 +12,12 @@ import ParseUI
 
 class ViewController: UIViewController {
     
+    
+
     @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var nameLbl: UILabel!
+   
+
     var posts: [Post] = []
     var image: UIImage?
     var image1: UIImage?
@@ -51,9 +55,30 @@ class ViewController: UIViewController {
         ParseHelper.postQuery { posts in
             self.posts = posts
             self.collection.reloadData()
+            
+            self.collectionView.
         }
+        
+        var refreshControl: UIRefreshControl = {
+            let refreshControl = UIRefreshControl()
+            refreshControl.addTarget(self, action: Selector("handleRefresh:"), forControlEvents: UIControlEvents.ValueChanged)
+            
+            return refreshControl
+        }()
+        
+        func handleRefresh(refreshControl: UIRefreshControl) {
+            self.collection.reloadData()
+            refreshControl.endRefreshing()
+            
+        }
+        
+        
     }
     
+    override func viewDidAppear(animated: Bool) {
+        self.collection.reloadData()
+        
+    }
 //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 //        print(segue.identifier)
 //        
@@ -77,29 +102,39 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PostCellIdentifier", forIndexPath: indexPath) as? PostCell
         //sets the post to be used as the object in the post array with the index of indexPath.item
         
+        if posts.count == 0 {
+            
+            cell?.thumbsUp.hidden = true
+            cell?.likes.hidden = true
+            
+        
+        } else {
+            
+            cell?.thumbsUp.hidden =  false
+            cell?.likes.hidden = false
         if posts.count > 0 {
             let post = posts[indexPath.item]
-            //sets the image of the cell to be the image of the post's image
-            //I don't have the post class so just set 'imageFile' to be what ever the image property is called in the post class
-            
+
             post.downloadImage { image in
                 guard let image = image else { print("NO IMAGE"); return }
                 cell?.imageView.image = image
                 self.image1 = cell?.imageView.image
+                collectionView.reloadData()
             }
         cell!.likes.text = ("\(post.likes)")
-            
+        }
+        // return cell!
         }
         return cell!
     }
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        // print("cell tapped \(indexPath.row)")
-        let cell = collectionView.cellForItemAtIndexPath(indexPath) as! PostCell
-    }
+//    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+//        // print("cell tapped \(indexPath.row)")
+//        _ = collectionView.cellForItemAtIndexPath(indexPath) as! PostCell
+//    }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return posts.count
         // return posts.count > 0 ? posts.count / collectionView.numberOfSections() : 0
     }
     
@@ -107,7 +142,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         return 1
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake(105, 125)
-    }
+//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+//        return CGSizeMake(105, 125)
+//    }
 }

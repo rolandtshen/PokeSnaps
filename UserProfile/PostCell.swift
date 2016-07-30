@@ -11,8 +11,10 @@ import Parse
 
 class PostCell: UICollectionViewCell {
     
-    @IBOutlet weak var likes:UILabel!
+
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var thumbsUp: UIImageView!
+    @IBOutlet weak var likes: UILabel!
     
 
     

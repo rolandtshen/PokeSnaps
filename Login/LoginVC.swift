@@ -66,7 +66,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     
     func errorHandler() {
         
-        let alert = UIAlertController(title: "Error", message: "Something went wrong. Invalid username or password.", preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: "Error", message: "Invalid username or password.", preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(
             
             UIAlertAction(

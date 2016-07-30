@@ -21,70 +21,65 @@ private let kolodaAlphaValueSemiTransparent: CGFloat = 0.1
 class BackgroundAnimationViewController: UIViewController {
     
     @IBOutlet weak var kolodaView: CustomKolodaView!
+
+    @IBAction func flagPost(sender: AnyObject) {
+        showFlagActionSheetForPost()
+    }
     
     var images = [UIImage]()
     var posts: [Post] = []
     
-    var a: Int = 0
-
-    var index: Int = -1
-
     @IBOutlet weak var leftButton: UIButton!
     @IBOutlet weak var rightButton: UIButton!
+    
+    func showFlagActionSheetForPost() {
+        let alertController = UIAlertController(title: nil, message: "Do you want to report this post?", preferredStyle: .ActionSheet)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        let destroyAction = UIAlertAction(title: "Report", style: .Destructive) { (action) in
+            let post = Post()
+            post.flag(post)
+        }
+        
+        alertController.addAction(destroyAction)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
     
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         kolodaView.alphaValueSemiTransparent = kolodaAlphaValueSemiTransparent
         kolodaView.countOfVisibleCards = kolodaCountOfVisibleCards
         kolodaView.delegate = self
         kolodaView.dataSource = self
         kolodaView.animator = BackgroundKolodaAnimator(koloda: kolodaView)
-     
-
-
+        
         self.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         
-        ParseHelper.timelineRequestForCurrentUser { (result: [PFObject]?, error: NSError?) -> Void in
+        ParseHelper.timelineRequestForCurrentUser { result, error in
             self.posts = result as? [Post] ?? []
-            for a in 0...(self.posts.count - 1) {
-            self.posts[a].downloadImage { image in
-                self.images.append(image!)
-                if (a == 5) {
+            
+            for post in self.posts {
+                post.downloadImage { image in
+                    guard let image = image else { return }
+                    
+                    self.images.append(image)
                     self.kolodaView.reloadData()
                 }
-                
-                }
             }
-
         }
-    
-        
-
     }
+    
     @IBAction func leftButtonTapped(sender: AnyObject) {
         kolodaView?.swipe(SwipeResultDirection.Left)
-        ParseHelper.timelineRequestForCurrentUser { (result: [PFObject]?, error: NSError?) -> Void in
-            self.posts = result as? [Post] ?? []
-            let likes = Int(self.posts[self.index].likes!) - 1
-            
-            self.posts[self.index].likes = likes
-            let post = self.posts[self.index]
-            post.saveInBackground()
-        }
     }
+    
     @IBAction func rightButtonTapped(sender: AnyObject) {
-        ParseHelper.timelineRequestForCurrentUser { (result: [PFObject]?, error: NSError?) -> Void in
-            self.posts = result as? [Post] ?? []
-            let likes = Int(self.posts[self.index].likes!) + 1
-            
-            self.posts[self.index].likes = likes
-            let post = self.posts[self.index]
-            post.saveInBackground()
-        }
         kolodaView?.swipe(SwipeResultDirection.Right)
-        
-
     }
     
     @IBAction func undoButtonTapped() {
@@ -92,15 +87,18 @@ class BackgroundAnimationViewController: UIViewController {
     }
 }
 
+
+
+
 //MARK: KolodaViewDelegate
 extension BackgroundAnimationViewController: KolodaViewDelegate {
-    
     func kolodaDidRunOutOfCards(koloda: KolodaView) {
         kolodaView.resetCurrentCardIndex()
     }
     
     func koloda(koloda: KolodaView, didSelectCardAtIndex index: UInt) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "http://pokesnap.weebly.com/")!)
+        let pokesnapURL = NSURL(string: "http://pokesnap.weebly.com")!
+        UIApplication.sharedApplication().openURL(pokesnapURL)
     }
     
     func kolodaShouldApplyAppearAnimation(koloda: KolodaView) -> Bool {
@@ -119,6 +117,7 @@ extension BackgroundAnimationViewController: KolodaViewDelegate {
         let animation = POPSpringAnimation(propertyNamed: kPOPViewFrame)
         animation.springBounciness = frameAnimationSpringBounciness
         animation.springSpeed = frameAnimationSpringSpeed
+        
         return animation
     }
 }
@@ -127,63 +126,81 @@ extension BackgroundAnimationViewController: KolodaViewDelegate {
 
 //MARK: KolodaViewDataSource
 extension BackgroundAnimationViewController: KolodaViewDataSource {
-    
-    
     @NSManaged var imageFile: PFFile?
     
     func kolodaNumberOfCards(koloda: KolodaView) -> UInt {
         return UInt(images.count)
     }
     
-    
     func koloda(koloda: KolodaView, viewForCardAtIndex index: UInt) -> UIView {
+        // Change type of index to Int instead of UInt
+        // Who even uses UInt?
+        let index = Int(index)
         
-        self.index = self.index + 1
-    
-        
-        if (images.count > 0) {
-            print(self.index)
-            
-            if (self.index > posts.count - 1) {
+        if images.count > 0 {
+            if index > posts.count - 1 {
                 kolodaDidResetCard(kolodaView)
-                self.index = 0
+                kolodaView.reloadData()
             }
-            return UIImageView(image: images[Int(self.index)])
             
+            return UIImageView(image: images[index])
         }
         
-        return UIImageView(image: UIImage(named: "Pokesnaps" ))
+        // Return the placeholder
+        return UIImageView(image: UIImage(named: "Pokesnaps"))
     }
     
     func koloda(koloda: KolodaView, viewForCardOverlayAtIndex index: UInt) -> OverlayView? {
-        
-        
         return NSBundle.mainBundle().loadNibNamed("CustomOverlayView",
                                                   owner: self, options: nil)[0] as? OverlayView
     }
+    
     func koloda(koloda: KolodaView, didSwipeCardAtIndex index: UInt, inDirection direction: SwipeResultDirection) {
-      print(direction.rawValue)
-        if direction.rawValue == ("Left") {
-            ParseHelper.timelineRequestForCurrentUser { (result: [PFObject]?, error: NSError?) -> Void in
-                self.posts = result as? [Post] ?? []
-                let likes = Int(self.posts[self.index].likes!) - 1
-                
-                self.posts[self.index].likes = likes
-                let post = self.posts[self.index]
-                post.saveInBackground()
-            }
-
-        }
+        // Change index to Int because literally no one uses UInt
+        let index = Int(index)
         
-        if (direction.rawValue == ("Right")) {
-            ParseHelper.timelineRequestForCurrentUser { (result: [PFObject]?, error: NSError?) -> Void in
-                self.posts = result as? [Post] ?? []
-                let likes = Int(self.posts[self.index].likes!) + 1
+        switch direction.rawValue {
+        case "Left" :
+            ParseHelper.timelineRequestForCurrentUser { result, error in
+                guard result != nil else { self.posts = []; return }
                 
-                self.posts[self.index].likes = likes
-                let post = self.posts[self.index]
-                post.saveInBackground()
+                if let posts = result as? [Post] {
+                    self.posts = posts
+                    let post = posts[index]
+                    
+                    guard post.likes != nil else { return }
+                    
+                    var likes = Int(post.likes!)
+                    likes -= 1
+                    post.likes = likes
+                    
+                    post.saveInBackground()
+                }
             }
+            break
+            
+        case "Right" :
+            ParseHelper.timelineRequestForCurrentUser { result, error in
+                guard result != nil else { self.posts = []; return }
+                
+                if let posts = result as? [Post] {
+                    self.posts = posts
+                    let post = posts[index]
+                    
+                    guard post.likes != nil else { return }
+                    
+                    var likes = Int(post.likes!)
+                    likes += 1
+                    post.likes = likes
+                    
+                    post.saveInBackground()
+                }
+            }
+            break
+            
+        default :
+            print("Not a valid direction.")
+            break
         }
     }
 }
